@@ -1,0 +1,127 @@
+.weatherPanel{
+    display: grid;
+    background-color: #24242460;
+    width: 15%;
+    grid-template-areas: "icon"
+                         "temp"
+                         "info"
+                         "time";
+    padding: 12px;
+    color: var(--white);
+}
+
+.weatherIcon{
+    width: 80px;
+    grid-area: icon;
+    margin: auto;
+    display: flex;
+}
+
+.temp{
+    grid-area: temp;
+    margin: 24px auto;
+}
+
+.weatherInfo{
+    grid-area: info;
+}
+
+.time{
+    grid-area: time;
+    margin: 16px 0;
+}
+
+.weatherPanel > p{
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+.temp{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.weatherPanel > div{
+    font-size: 14px;
+    font-weight: 400;
+
+    width: 100%;
+}
+
+.weatherInfo p{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #FFFFFF30;
+    margin: auto;
+    position: relative;
+}
+
+.weatherInfo p span{
+    position: absolute;
+    left: 10px;
+    color: #FFFFFF90;
+    font-size: 12px;
+}
+
+.weatherPanelLoading{
+    animation: loadingWeatherPanel 2s infinite ease-in-out alternate-reverse;
+    
+}
+
+@keyframes loadingWeatherPanel{
+    from{
+        background-color: #24242460;
+    }
+    to{
+        background-color: #70707060;
+    }
+}
+
+@media (max-width: 1024px){
+    .pressure, .wind{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .weatherPanel{
+        width: 90%;
+        min-height: 50px;
+        grid-template-areas: "icon temp info"
+                             "icon time time";
+        grid-template-columns: .3fr .5fr 1.5fr;
+    }
+
+    .weatherInfo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .weatherInfo p{
+        width: 50%;
+        text-align: end;
+    }
+
+    .pressure, .wind{
+        display: initial;
+    }
+}
+
+@media (max-width: 640px){
+    .weatherPanel{
+        width: 95%;
+    }
+}
+
+@media (max-width: 450px){
+    .pressure, .wind{
+        display: none;
+    }
+    .weatherInfo{
+        flex-direction: column;
+    }
+    .weatherInfo p{
+        width: 100%;
+    }
+}

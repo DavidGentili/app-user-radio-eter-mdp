@@ -1,0 +1,30 @@
+.streamWindow{
+    width: 75%;
+    max-width: 1024px;
+    background: linear-gradient(90deg, var(--purpleColor), var(--lighthBlueColor));
+    margin: 16px auto 56px auto;
+    padding: 24px;
+    z-index: 2;
+    position: relative;
+}
+
+.streamWindow img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 768px){
+    .streamWindow{
+        width: 90%;
+    }
+}
+
+@media (max-width: 640px){
+
+}

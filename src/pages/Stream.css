@@ -1,0 +1,79 @@
+body{
+    background-color: var(--purpleColor);
+}
+
+.logotipo{
+    display: flex;
+    width: 128px;
+    margin: 20px auto;
+    z-index: 2;
+    position: relative;
+}
+
+.backgroundIsotipo{
+    position: absolute;
+    top: -10%;
+    left: -35%;
+    z-index: 1;
+    width: 100vw;
+    max-width: 1280px;
+}
+
+.container{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 56px;
+}
+
+.publicitySpace{
+    display: flex;
+    width: 70%;
+    gap: 32px;
+    
+}
+
+.individualPublicity{
+    width: 50%;
+    height: auto;
+    padding: 12px;
+    background-color: #24242460;
+    display: flex;
+}
+.individualPublicity img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 768px){
+    .weatherPanel{
+        order: 1;
+    }
+    .streamWindow{
+        order: 2;
+    }
+    .publicitySpace{
+        order: 3;
+    }
+    .publicitySpace{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .individualPublicity{
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 640px){
+    .individualPublicity{
+        width: 90%;
+        margin: auto;
+    }
+}
