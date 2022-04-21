@@ -6,15 +6,16 @@
 }
 
 :root{
-  --purpleColor: #B67DEF;
-  --lighthBlueColor: #4BC1EA;
-  --pinkColor: #FF90E8;
-  --yellowColor: #FFF030;
-  --greenColor: #C4F300;
-  --blueColor: #5148F7;
+  --purple: #B67DEF;
+  --lighthBlue: #4BC1EA;
+  --pink: #FF90E8;
+  --yellow: #FFF030;
+  --green: #C4F300;
+  --blue: #5148F7;
   --black: #242424;
   --lightBlack: #707070;
   --white: #FFFFFF;
+  --lightGrey: #F6F6F6;
   --facebookColor: #4267b2;
   --instagramColor: #E1306C;
   --twitterColor: #1da1f2;

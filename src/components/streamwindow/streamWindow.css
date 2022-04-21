@@ -1,7 +1,7 @@
 .streamWindow{
     width: 75%;
     max-width: 1024px;
-    background: linear-gradient(90deg, var(--purpleColor), var(--lighthBlueColor));
+    background: linear-gradient(90deg, var(--purple), var(--lighthBlue));
     margin: 16px auto 56px auto;
     padding: 24px;
     z-index: 2;
@@ -21,7 +21,9 @@
 
 @media (max-width: 768px){
     .streamWindow{
-        width: 90%;
+        width: 95%;
+        background: none;
+        background-color: var(--lighthBlue);
     }
 }
 

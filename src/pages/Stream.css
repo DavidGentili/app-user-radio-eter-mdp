@@ -1,13 +1,5 @@
 body{
-    background-color: var(--purpleColor);
-}
-
-.logotipo{
-    display: flex;
-    width: 128px;
-    margin: 20px auto;
-    z-index: 2;
-    position: relative;
+    background-color: var(--purple);
 }
 
 .backgroundIsotipo{
@@ -15,7 +7,7 @@ body{
     top: -10%;
     left: -35%;
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     max-width: 1280px;
 }
 
@@ -52,6 +44,11 @@ body{
 }
 
 @media (max-width: 768px){
+
+    .backgroundIsotipo{
+        display: none; 
+    }
+
     .weatherPanel{
         order: 1;
     }
