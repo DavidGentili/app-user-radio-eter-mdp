@@ -94,7 +94,7 @@
 
 @media (max-width: 768px){
     .weatherPanel{
-        width: 90%;
+        width: 95%;
         min-height: 50px;
         grid-template-areas: "icon temp info"
                              "icon time time";

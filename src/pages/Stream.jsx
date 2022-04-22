@@ -1,6 +1,6 @@
 import { React, useEffect, useRef } from 'react';
 
-import StreamWindow from '../components/StreamWindow/StreamWindow';
+import StreamWindow from '../components/streamwindow/StreamWindow';
 import Isotipo from '../components/Isotipo';
 import WeatherPanel from '../components/weather/WeatherPanel';
 import Footer from '../components/footer/Footer'
@@ -23,7 +23,7 @@ const showElements = (entries, observer) => {
 const observer = new IntersectionObserver(showElements,{
     root: null,
     rootMargin: '0px',
-    threshold: .5,
+    threshold: .25,
 })
 
 
@@ -34,10 +34,9 @@ const Stream = () => {
     const footerRef = useRef(null);
 
     useEffect(() => {
-        console.log(publicityRef.current, weatherRef.current)
-        observer.observe(publicityRef.current);
-        observer.observe(weatherRef.current);
-        observer.observe(footerRef.current);
+        observer.observe(publicityRef.current ? publicityRef.current : null);
+        observer.observe(weatherRef.current ? weatherRef.current : null);
+        observer.observe(footerRef.current ? footerRef.current : null);
     }, []);
 
     return(
