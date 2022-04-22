@@ -33,6 +33,14 @@ body{
     padding: 12px;
     background-color: #24242460;
     display: flex;
+    opacity: 0;
+    transform: translateX(-25%);
+    transition: 1.5s;
+}
+
+.publicitySpace.visible .individualPublicity{
+    opacity: 1;
+    transform: translate(0);
 }
 .individualPublicity img{
     width: 100%;

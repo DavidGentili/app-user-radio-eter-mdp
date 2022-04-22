@@ -23,16 +23,21 @@ const showElements = (entries, observer) => {
 const observer = new IntersectionObserver(showElements,{
     root: null,
     rootMargin: '0px',
-    threshold: 1.0,
+    threshold: .5,
 })
 
 
 const Stream = () => {
 
     const publicityRef = useRef(null);
+    const weatherRef = useRef(null);
+    const footerRef = useRef(null);
 
     useEffect(() => {
-        console.log(publicityRef);
+        console.log(publicityRef.current, weatherRef.current)
+        observer.observe(publicityRef.current);
+        observer.observe(weatherRef.current);
+        observer.observe(footerRef.current);
     }, []);
 
     return(
@@ -50,10 +55,10 @@ const Stream = () => {
                     </a>
                 </div>
 
-                <WeatherPanel />
+                <WeatherPanel ref={weatherRef} />
             </div>
 
-            <Footer />
+            <Footer ref={footerRef}/>
 
         </>
     )

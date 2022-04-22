@@ -1,9 +1,9 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect, forwardRef } from 'react';
 import  weatherAPI from '../../services/weatherAPI'
 
 import './weatherPanel.css'
 
-const WeatherPanel = () => {
+const WeatherPanel = forwardRef((props, ref) => {
 
     const [weather, setWeather] = useState(undefined)
     const [time, setTime] = useState(new Date(Date.now()))
@@ -18,12 +18,11 @@ const WeatherPanel = () => {
     }, [])
 
     useEffect(() => {
-        console.log('here')
         weatherAPI.getWeather().then(weather => setWeather(weather))
     }, [])
 
     return (
-        <div className={'weatherPanel ' + ( !weather ? 'weatherPanelLoading' : '') }>
+        <div className={'weatherPanel ' + ( !weather ? 'weatherPanelLoading' : '')} ref={ref}>
             { weather && <>
                 <img className='weatherIcon' src={weather.icon} alt="" />
                 <h6 className='temp'>{weather.temp}°C</h6>
@@ -37,6 +36,6 @@ const WeatherPanel = () => {
             </>}
         </div>
     )
-}
+})
 
 export default WeatherPanel;

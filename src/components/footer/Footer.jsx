@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, forwardRef } from 'react';
 
 
 import logotipoWhiteGreen from '../../../assets/logotipo-w-g.png';
@@ -11,9 +11,9 @@ import youtube from '../../../assets/socialMedia/youtube.png';
 
 import './footer.css'
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
     return(
-        <footer>
+        <footer ref={ref ? ref : null}>
             <img src={logotipoWhiteGreen} alt="Radio Eter MDP" />
 
             <div className="socialMedias">
@@ -25,6 +25,6 @@ const Footer = () => {
 
         </footer>
     )
-}
+})
 
 export default Footer;
