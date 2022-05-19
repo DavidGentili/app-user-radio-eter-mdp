@@ -8,13 +8,11 @@
                          "time";
     padding: 12px;
     color: var(--white);
-    transform: translateX(25%);
     opacity: 0;
     transition: 1.5s;
 }
 
 .weatherPanel.visible{
-    transform: translate(0);
     opacity: 1;
 }
 

@@ -2,13 +2,11 @@ footer{
     padding-bottom: 100px;
     position: relative;
     z-index: 2;
-    transform: translateY(10%);
     opacity: 0;
     transition: 1s;
 }
 
 footer.visible{
-    transform: translateX(0);
     opacity: 1;
 
 }
