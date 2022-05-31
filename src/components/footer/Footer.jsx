@@ -20,7 +20,7 @@ const Footer = forwardRef((props, ref) => {
                 <a href="https://es-la.facebook.com/radioetermdp/" target='_blank' rel='oopener noreferrer'><img src={facebook} alt="" /></a>
                 <a href="https://www.instagram.com/radioetermdp/" target='_blank' rel='oopener noreferrer'><img src={instagram} alt="" /></a>
                 <a href="https://twitter.com/radioetermdp" target='_blank' rel='oopener noreferrer'><img src={twitter} alt="" /></a>
-                <a href="https://www.youtube.com/channel/UC2NCse0B9wHbWpUwziqBApQ" target='_blank' rel='oopener noreferrer'><img src={youtube} alt="" /></a>
+                <a href="https://www.youtube.com/channel/UCvjLT6lA90NbTzeRu9Xywkg" target='_blank' rel='oopener noreferrer'><img src={youtube} alt="" /></a>
             </div>
 
         </footer>
