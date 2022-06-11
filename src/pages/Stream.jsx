@@ -7,7 +7,7 @@ import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 
 import publicity1 from '../../assets/publicity-1.gif';
-import publicity2 from '../../assets/publicity-2.gif'
+import publicity2 from '../../assets/Publicity-2.gif'
 
 
 import './Stream.css'
