@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactHlsPlayer from 'react-hls-player';
 
-
 import { PlayIcon, ChevronTopIcon, SoundIcon, MutedIcon, PauseIcon } from '../Icons';
+import Isotipo from '../../components/Isotipo'
 
 import './player.css';
 
@@ -46,6 +46,7 @@ const Player = () => {
         }
     }, [volume])
 
+
     return (
         <div className={"player" + (expanded ? ' expanded' : '')}>
             <div className="playerContainer">
@@ -70,6 +71,7 @@ const Player = () => {
                     <span className='spinner' ref={spinnerRef}></span>
                 </div>
             </div>
+            <Isotipo />
         </div>
     )
 }

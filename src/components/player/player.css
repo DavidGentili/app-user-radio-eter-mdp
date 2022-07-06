@@ -16,7 +16,25 @@
     transition: .6s ease-in-out;
 }
 
+.player .isotipo{
+    opacity: 0;
+    fill: var(--lightBlue);
+    position: absolute;
+    width: 80%;
+    top: -40%;
+    right: -30%;
+    z-index: 1;
+    filter: blur(4px) drop-shadow(-30px 30px  0px #4BC1EAA0);
+    transition: .6s .6s ease-in-out;
+}
+
+.player.expanded .isotipo{
+    opacity: 1;
+    transition: .6s ease-in-out;
+}
+
 .player .playerContainer{
+    z-index: 2;
     max-width: 1280px;
     height: 100%;
     margin: auto;
@@ -47,12 +65,15 @@
 .player .controls input{
     width: 0;
     opacity: 0;
+    background-color: red;
+    border-radius: 16px;
+    padding: 8px;
     transition: .6s;
 }
 
 .player .controls:hover input{
     opacity: 1;
-    width: 40%;
+    width: 100px;
 }
 
 .player button{
@@ -76,21 +97,25 @@
     fill: var(--white);
 }
 
-.player .soundBtn,
-.player .expandBtn{
+.player .soundBtn{
     padding: 6px;
     fill: var(--lightBlue);
 }
 
 .player .expandBtn{
     position: absolute;
+    fill: var(--lightBlue);
+    padding: 6px;
     right: 0;
     top: 12px;
-    transition: .6s ease-in-out;
+    transition: transform .6s, fill .6s .6s ease-in-out;
 }
 
 .player.expanded .expandBtn{
     transform: rotate(180deg);
+    fill: var(--white);
+    transition: .6s ease-in-out;
+
 }
 
 .player .mutedIcon{
