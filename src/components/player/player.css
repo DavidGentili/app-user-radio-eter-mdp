@@ -65,9 +65,6 @@
 .player .controls input{
     width: 0;
     opacity: 0;
-    background-color: red;
-    border-radius: 16px;
-    padding: 8px;
     transition: .6s;
 }
 
