@@ -8,7 +8,7 @@ import './player.css';
 
 const Player = () => {
 
-    const [expanded, setExpanded] = useState(true);
+    const [expanded, setExpanded] = useState(false);
     const [played, setPlayed] = useState(false);
     const [sound, setSound] = useState(true);
     const [volume, setVolume] = useState(1);

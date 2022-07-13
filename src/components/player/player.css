@@ -162,6 +162,41 @@
 }
 
 
+@media (max-width: 1024px){
+    .player .isotipo{
+        width: 100%;
+        top: 0%;
+        right: -30%;
+    }
+}
+
+@media (max-width: 768px){
+    .player .isotipo{
+        width: 130%;
+        right: -50%;
+    }
+}
+
+@media (max-width: 640px){
+    .player .controls .soundBtn{
+        display: none;
+    }
+
+    .player h6{
+        font-size: 20px;
+    }
+
+    .player .isotipo{
+        width: 180%;
+        right: -80%;
+    }
+}
+
+@media (max-width: 300px){
+    .player h6{
+        display: none;
+    }
+}
 
 
 
