@@ -4,7 +4,7 @@ import Header from '../components/header/Header'
 import publicity1 from '../../assets/publicity-1.gif'
 import publicity2 from '../../assets/publicity-2.gif'
 import MainSlider from '../components/mainSlider/MainSlider'
-import { getOficialPublicities } from '../services/publicity'
+import { getStandardPublicities } from '../services/publicity'
 
 
 import './home.css'
@@ -23,10 +23,16 @@ const initialPublicities = [
 
 const Home = () => {
 
-    const [publicities, setPublicities] = useState(initialPublicities)
+    const [standardPublicities, setstandardPublicities] = useState([])
 
     useEffect( () => {
-        getOficialPublicities().then(data => console.log(data))
+        getStandardPublicities().then(data => {
+            const aux = [ ...initialPublicities];
+            while(data.length < 2){
+                data.push(aux.shift());
+            }
+            setstandardPublicities(data);
+        })
     }, [])
 
     return (
@@ -36,8 +42,12 @@ const Home = () => {
                 
                 <MainSlider />
 
-                <div className="publicityImage boxContainer"><a href="#"><img className='publicityImage' src={publicities[0].src} alt="Esta es una publicidad" /></a></div>
-                <div className="publicityImage boxContainer"><a href="#"><img className='publicityImage' src={publicities[1].src} alt="Esta es una publicidad" /></a></div>
+                <div className="publicityImage boxContainer">
+                    { standardPublicities[0] && <a href="#"><img className='publicityImage' src={standardPublicities[0].src} alt="Esta es una publicidad" /></a>}
+                </div>
+                <div className="publicityImage boxContainer">
+                    { standardPublicities[1] && <a href="#"><img className='publicityImage' src={standardPublicities[1].src} alt="Esta es una publicidad" /></a>}
+                </div>
 
             </section>
         </main>
