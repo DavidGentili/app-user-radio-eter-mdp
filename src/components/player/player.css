@@ -1,5 +1,6 @@
 .player{
-    position: absolute;
+    background-color: var(--white);
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -8,6 +9,7 @@
     box-shadow: 0px -10px 20px #24242460;
     overflow: hidden;
     transition: .6s .6s ease-in-out;
+    z-index: 99;
 }
 
 .player.expanded{

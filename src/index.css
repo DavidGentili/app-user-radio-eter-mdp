@@ -1,58 +1,68 @@
 *{
-  font-family: 'Roboto', 'Segoe-UI', sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe-UI', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 :root{
-  --purple: #B67DEF;
-  --lightBlue: #4BC1EA;
-  --pink: #FF90E8;
-  --yellow: #FFF030;
-  --green: #C4F300;
-  --blue: #5148F7;
-  --black: #242424;
-  --lightBlack: #707070;
-  --white: #FFFFFF;
-  --lightGrey: #F6F6F6;
-  --facebookColor: #4267b2;
-  --instagramColor: #E1306C;
-  --twitterColor: #1da1f2;
-  --youtubeColor: #ff0000;
+    --purple: #B67DEF;
+    --lightBlue: #4BC1EA;
+    --pink: #FF90E8;
+    --yellow: #FFF030;
+    --green: #C4F300;
+    --blue: #5148F7;
+    --black: #242424;
+    --lightBlack: #707070;
+    --white: #FFFFFF;
+    --lightGrey: #F6F6F6;
+    --facebookColor: #4267b2;
+    --instagramColor: #E1306C;
+    --twitterColor: #1da1f2;
+    --youtubeColor: #ff0000;
 }
 
 button{
-  cursor: pointer;
-  background: none;
-  border: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.boxContainer{
+    box-shadow: 0 0 15px #24242460;
 }
 
 /************* SPINNER *************/
 
 .spinner{
-  position: absolute;
-  z-index: 3;
-  width: 64px;
-  height: 64px;
-  border: 5px solid var(--lightBlue);
-  border-bottom: 5px solid #4BC1EA00;
-  border-left: 5px solid #4BC1EA55;
-  border-top: 5px solid #4BC1EAAA;
-  border-right: 5px solid #4BC1EA;
-  animation: rotate .5s linear infinite;
-  border-radius: 100%;
-  transform: 1s;
+    position: absolute;
+    z-index: 3;
+    width: 64px;
+    height: 64px;
+    border: 5px solid var(--lightBlue);
+    border-bottom: 5px solid #4BC1EA00;
+    border-left: 5px solid #4BC1EA55;
+    border-top: 5px solid #4BC1EAAA;
+    border-right: 5px solid #4BC1EA;
+    animation: rotate .5s linear infinite;
+    border-radius: 100%;
+    transform: 1s;
 }
 
 .spinner.hidden{
-  display: none;
+    display: none;
+}
+
+main{
+    max-width: 1024px;
+    margin: auto;
+    padding-bottom: 200px;
 }
 
 
 /************* ANIMATIONS *************/
 
 @keyframes rotate {
-  from{transform: rotate(0deg);}
-  to{transform: rotate(360deg);}
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
 }
