@@ -1,0 +1,67 @@
+.programGrid{
+    grid-area: programGrid;
+}
+
+.programGrid .gridDay{
+    width: 30%;
+}
+
+.programGrid .gridDay > h6{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.programGrid .gridDay .program{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.programGrid .gridDay .program{
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: flex-start;
+    justify-content: space-between;
+    hyphens: auto;
+    color: var(--black);
+}
+
+.programGrid .gridDay .program .hour{
+    width: 30%;
+    color: var(--lightBlack);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: .8;
+}
+
+.programGrid .gridDay .program .name{
+    width: 50%;
+    margin-top: -6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.programGrid .gridDay .program .circle{
+    position: relative;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    margin: 0  calc(10% - 8px);
+    border-radius: 100%;
+    border: 5px solid var(--lightBlue);
+}
+
+.programGrid .gridDay .program .line{
+    /* height: 100%; */
+    height: calc(100% - 15px);
+    width: 2px;
+    background-color: var(--lightBlack);
+    position: absolute;
+    left: calc(40% - 1px );
+    top: 16px;
+    z-index: 1;
+}

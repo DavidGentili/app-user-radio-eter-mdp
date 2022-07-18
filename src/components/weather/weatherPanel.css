@@ -1,19 +1,17 @@
 .weatherPanel{
     display: grid;
     background-color: #24242460;
-    width: 15%;
-    grid-template-areas: "icon"
-                         "temp"
-                         "info"
-                         "time";
+    width: 100%;
+    height: auto;
+    grid-template-areas: "icon temp"
+                         "info info"
+                         "time time";
     padding: 12px;
     color: var(--white);
-    opacity: 0;
+    grid-area: weatherPanel;
     transition: 1.5s;
-}
-
-.weatherPanel.visible{
-    opacity: 1;
+    border-radius: 12px;
+    aspect-ratio: 1/1;
 }
 
 .weatherIcon{
@@ -30,6 +28,12 @@
 
 .weatherInfo{
     grid-area: info;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weatherInfo > p{
+    width: 50%;
 }
 
 .time{

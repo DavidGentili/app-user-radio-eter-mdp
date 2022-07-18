@@ -22,7 +22,7 @@ const WeatherPanel = forwardRef((props, ref) => {
     }, [])
 
     return (
-        <div className={'weatherPanel ' + ( !weather ? 'weatherPanelLoading' : '')} ref={ref}>
+        <div className={`weatherPanel ${!weather && 'weatherPanelLoading'} ${props.className}`} ref={ref}>
             { weather && <>
                 <img className='weatherIcon' src={weather.icon} alt="" />
                 <h6 className='temp'>{weather.temp}°C</h6>
