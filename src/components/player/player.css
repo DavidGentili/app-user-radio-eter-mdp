@@ -61,6 +61,7 @@
 
 .player.expanded .controls{
     left: 50%;
+    bottom: 0;
     transition: .6s ease-in-out;
 }
 
@@ -150,7 +151,6 @@
     transform: translateY(0);
     transition: transform .3s, opacity .6s .6s;
 
-    
 }
 
 .player .playerWindow video{

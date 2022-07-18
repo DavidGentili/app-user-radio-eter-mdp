@@ -35,7 +35,7 @@
     opacity: 1;
 }
 
-.chevronIcon{
+.mainSlider .chevronIcon{
     width: 22px;
     margin: 4px;
     fill: var(--white);
