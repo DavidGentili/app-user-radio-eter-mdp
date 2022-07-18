@@ -2,14 +2,14 @@
     display: flex;
     flex-shrink: 0;
     width: 100%;
-    aspect-ratio: 75/50;
+    aspect-ratio: 75/52;
 }
 
 .homeMain .mainSection .mainSlider{
     position: relative;
     overflow: hidden;
     grid-area: principalSlider;
-    aspect-ratio: 75/50;
+    aspect-ratio: 75/52;
     display: flex;
     align-items: center;
 }

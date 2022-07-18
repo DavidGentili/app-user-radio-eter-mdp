@@ -1,11 +1,11 @@
 .homeMain .mainSection{
     display: grid;
     grid-template-columns: .75fr .25fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "principalSlider standarPublicity1"
                          "principalSlider standarPublicity2";
     column-gap: 12px;
-    row-gap: 8px;
+    row-gap: 2%;
     width: 80%;
     margin: 12px auto;
 }
@@ -13,12 +13,17 @@
 .homeMain .mainSection .publicityImage{
     display: flex;
     overflow: hidden;
-    aspect-ratio: 1000/980;
+    aspect-ratio: 1/1;
+}
+
+.homeMain .mainSection .publicityImage a{
+    width: 100%;
+    height: 100%;
 }
 
 .homeMain .mainSection .publicityImage img{
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .homeMain .mainSection .publicityImage:nth-child(1){
