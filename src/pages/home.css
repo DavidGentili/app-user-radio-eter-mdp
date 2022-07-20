@@ -69,7 +69,7 @@
 @media (max-width: 1024px){
     .homeMain .mainSection{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr ;
         grid-template-areas: "principalSlider principalSlider"
                              "standarPublicity1 standarPublicity2";
         width: 70%;
@@ -77,14 +77,18 @@
 
     .homeMain .secondarySection{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr auto auto;
         grid-template-areas: "programGrid programGrid "
                              "weatherPanel weatherPanel "
                              "oficialPublicity1 oficialPublicity2";
+        width: 70%;
     }
 }
 
 @media (max-width: 768px){
+    .homeMain .secondarySection{
+        width: 80%;
+    }
 
 }
 
@@ -108,11 +112,12 @@
 
     .homeMain .secondarySection{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr repeat(3, auto);
         grid-template-areas: "programGrid  "
                              "weatherPanel"
                              "oficialPublicity1"
                              "oficialPublicity2";
+        width: 90%;
     }
 
     .homeMain .publicityImage{

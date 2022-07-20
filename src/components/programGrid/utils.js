@@ -1,5 +1,20 @@
 export const programs = [
-    [//Lunes
+        [//Lunes
+        {
+            name: 'nombre del programa',
+            startHour: '00:00',
+            finishHour: '02:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '02:00',
+            finishHour: '06:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '06:00',
+            finishHour: '9:00',
+        },
         {
             name: 'nombre del programa',
             startHour: '09:00',
@@ -14,6 +29,21 @@ export const programs = [
             name: 'nombre del programa',
             startHour: '15:00',
             finishHour: '17:00',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '17:00',
+            finishHour: '18:00',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '18:00',
+            finishHour: '20:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '20:30',
+            finishHour: '23:30',
         },
     ],
     [//Martes
@@ -120,12 +150,57 @@ export const programs = [
     ]
 ]
 
+const p = [
+    [//Lunes
+        {
+            name: 'nombre del programa',
+            startHour: '00:00',
+            finishHour: '02:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '02:00',
+            finishHour: '06:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '06:00',
+            finishHour: '9:00',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '09:00',
+            finishHour: '12:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '12:30',
+            finishHour: '15:00',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '15:00',
+            finishHour: '17:00',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '17:00',
+            finishHour: '20:30',
+        },
+        {
+            name: 'nombre del programa',
+            startHour: '20:30',
+            finishHour: '23:30',
+        },
+    ],
+]
+
 const getCorrectValues = () => {
     const limit = getLimit();
-    const aux = new Array(6);
-    for( let i = 0 ; i < 6 ; i++){
-        aux[i] = i < limit ? i : limit;
-    }
+    const array = new Array(6).fill(0);
+    const aux = array.map(function(value, i){
+        return ( i < limit) ? i : limit;
+    })
     return [limit, ...aux];
 }
  

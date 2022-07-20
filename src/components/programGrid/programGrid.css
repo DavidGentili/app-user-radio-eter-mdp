@@ -4,7 +4,7 @@
     padding: 0 .5%;
     overflow: hidden;
     position: relative;
-    --slide: 33%
+    --slide: 33.3%
 }
 
 .programGrid button{
@@ -29,25 +29,26 @@
 }
 
 .programGrid .chevronLeft{
-    left: 4px;
+    left: 0px;
     top: 50%;
 }
 
 .programGrid .chevronRight{
-    right: 4px;
+    right: 0px;
     top: 50%;
 }
 
 .programGrid .contentDays{
     display: flex;
     width: 100%;
-    gap: 3%;
+    gap: 3.3%;
     justify-content: flex-start;
     transition: .6s ease-in-out;
 }
 
 .programGrid .gridDay{
     min-width: 30%; 
+    margin-bottom: 8px;
 }
 
 .programGrid .gridDay > h6{
@@ -84,7 +85,7 @@
 .programGrid .gridDay .program .name{
     width: 50%;
     margin-top: -6px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -108,6 +109,19 @@
     z-index: 1;
 }
 
+.programGrid .gridDay .program:last-child::after{
+    content: '';
+    position: absolute;
+    z-index: 3;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: var(--white);
+    border: 5px solid var(--lightBlue);
+    bottom: -1px;
+    left: calc(40% - 8px );
+}
+
 @media (max-width: 1024px){
     .programGrid{
         margin: 36px auto;
@@ -121,11 +135,11 @@
 @media (max-width: 768px){
     .programGrid{
         padding: 0 2%;
-        --slide: 49%
+        --slide: 50%
 
     }
     .programGrid .contentDays{
-        gap: 2%;
+        gap: 4%;
     }
     .programGrid .gridDay{
         min-width: 47%; 

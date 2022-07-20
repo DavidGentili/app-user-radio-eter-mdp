@@ -6,6 +6,8 @@ import publicity2 from '../../assets/publicity-2.gif'
 import MainSlider from '../components/mainSlider/MainSlider'
 import ProgramGrid from '../components/programGrid/ProgramGrid'
 import WeatherPanel from '../components/weather/WeatherPanel';
+import Publicity from '../components/Publicity'
+import Footer from '../components/footer/Footer'
 import { getStandardPublicities, getOficialPublicities } from '../services/publicity'
 
 
@@ -57,40 +59,20 @@ const Home = () => {
             <section className='mainSection'>
                 <MainSlider />
 
-                <div className="publicityImage boxContainer">
-                    { standardPublicities[0] && 
-                        <a href={standardPublicities[0].link}>
-                            <img className='publicityImage' src={standardPublicities[0].urlImage} alt="Esta es una publicidad" />
-                        </a>
-                    }
-                </div>
-                <div className="publicityImage boxContainer">
-                    { standardPublicities[1] && 
-                        <a href={standardPublicities[1].link}>
-                            <img className='publicityImage' src={standardPublicities[1].urlImage} alt="Esta es una publicidad" />
-                        </a>
-                    }
-                </div>
+                <Publicity publicity={standardPublicities[0]} />
+                <Publicity publicity={standardPublicities[1]} />
             </section>
 
             <section className="secondarySection">
                 <ProgramGrid />
                 <WeatherPanel className/>
-                <div className="publicityImage boxContainer">
-                    { oficialPublicities[0] && 
-                        <a href={oficialPublicities[0].link}>
-                            <img className='publicityImage' src={oficialPublicities[0].urlImage} alt="Esta es una publicidad" />
-                        </a>
-                    }
-                </div>
-                <div className="publicityImage boxContainer">
-                    { oficialPublicities[1] && 
-                        <a href={oficialPublicities[1].link}>
-                            <img className='publicityImage' src={oficialPublicities[1].urlImage} alt="Esta es una publicidad" />
-                        </a>
-                    }
-                </div>
+                <Publicity publicity={oficialPublicities[0]} />
+                <Publicity publicity={oficialPublicities[1]} />
+
             </section>
+
+            <Footer />
+
         </main>
     )
 }

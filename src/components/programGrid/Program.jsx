@@ -15,7 +15,7 @@ const Program = ({program}) => {
 
 
     return (
-        <div className='program' style={ {height : `${getHoursDifference(startHour,finishHour) * 24}px`} }>
+        <div className='program' style={ {height : `${getHoursDifference(startHour,finishHour) * 36}px`} }>
             <p className='hour'>{startHour}</p>
             <span className='circle'></span>
             <p className="name">{name}</p>

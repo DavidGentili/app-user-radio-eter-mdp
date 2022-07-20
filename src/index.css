@@ -1,4 +1,4 @@
-*{
+*, *::after, *::before{
     font-family: 'Roboto', 'Segoe-UI', sans-serif;
     padding: 0;
     margin: 0;
@@ -56,7 +56,6 @@ button{
 main{
     max-width: 1024px;
     margin: auto;
-    padding-bottom: 200px;
 }
 
 
