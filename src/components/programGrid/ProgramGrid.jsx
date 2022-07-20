@@ -5,7 +5,7 @@ import GridDay from './GridDay';
 
 import { ChevronLeftIcon, ChevronRightIcon } from '../Icons';
 
-import { programs, getInitialStateSliderGrid } from './utils';
+import { programs, getInitialStateSliderGrid, getLimit } from './utils';
 
 
 const daysValues = [
@@ -41,23 +41,22 @@ const daysValues = [
 
 const ProgramGrid = () => {
 
-    const limit = 4;
     const [sliderPosition, SetSliderPosition] = useState(getInitialStateSliderGrid());
 
     const nextEvent = (e) => {
+        const limit = getLimit();
         SetSliderPosition( (sliderPosition === limit ) ? 0 : sliderPosition + 1);
     }
 
     const prevEvent = (e) => {
+        const limit = getLimit();
         SetSliderPosition( (sliderPosition === 0 ) ? limit : sliderPosition - 1);
     }
-
-    console.log(sliderPosition)
 
     return (
         <div className='programGrid'>
             <button className='chevronLeft' onClick={prevEvent} ><ChevronLeftIcon /></button>
-            <div className="contentDays" style={{transform : `translateX(${-33* sliderPosition }%)`}}>
+            <div className="contentDays" style={{transform : `translateX(calc(var(--slide) * ${-sliderPosition }))`}}>
                 {programs.map((value, index) => 
                     <GridDay key={daysValues[index].value} dayName={daysValues[index].text} programs={value} />
                 )}

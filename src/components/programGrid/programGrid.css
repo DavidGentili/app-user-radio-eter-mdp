@@ -1,14 +1,17 @@
 .programGrid{
+    width: 100%;
     grid-area: programGrid;
     padding: 0 .5%;
     overflow: hidden;
     position: relative;
+    --slide: 33%
 }
 
 .programGrid button{
     position: absolute;
-    width: 24px;
+    width: 20px;
     opacity: 0;
+    z-index: 3;
     transition: .6s ease-in-out;
 }
 
@@ -26,12 +29,12 @@
 }
 
 .programGrid .chevronLeft{
-    left: 0;
+    left: 4px;
     top: 50%;
 }
 
 .programGrid .chevronRight{
-    right: 0;
+    right: 4px;
     top: 50%;
 }
 
@@ -44,8 +47,7 @@
 }
 
 .programGrid .gridDay{
-    min-width: 30%;
-    
+    min-width: 30%; 
 }
 
 .programGrid .gridDay > h6{
@@ -104,4 +106,48 @@
     left: calc(40% - 1px );
     top: 16px;
     z-index: 1;
+}
+
+@media (max-width: 1024px){
+    .programGrid{
+        margin: 36px auto;
+    }
+
+    .programGrid button{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px){
+    .programGrid{
+        padding: 0 2%;
+        --slide: 49%
+
+    }
+    .programGrid .contentDays{
+        gap: 2%;
+    }
+    .programGrid .gridDay{
+        min-width: 47%; 
+    }
+}
+
+@media (max-width: 640px){
+
+
+
+}
+
+@media (max-width: 420px){
+    .programGrid{
+        padding: 0 5%;
+        --slide: 100%
+
+    }
+    .programGrid .contentDays{
+        gap: 5%;
+    }
+    .programGrid .gridDay{
+        min-width: 95%; 
+    }
 }

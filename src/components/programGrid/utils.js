@@ -120,8 +120,22 @@ export const programs = [
     ]
 ]
 
+const getCorrectValues = () => {
+    const limit = getLimit();
+    const aux = new Array(6);
+    for( let i = 0 ; i < 6 ; i++){
+        aux[i] = i < limit ? i : limit;
+    }
+    return [limit, ...aux];
+}
+ 
 export function getInitialStateSliderGrid(){
-    const correctsValues = [4,0,1,2,3,4,4]
+    const correctsValues = getCorrectValues()
     const today = new Date(Date.now())
     return correctsValues[today.getDay()];
+}
+
+export function getLimit(){
+    const width = document.body.clientWidth;
+    return (width > 768) ? 4 : ((width > 420) ? 5 : 6);
 }

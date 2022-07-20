@@ -89,51 +89,26 @@
 }
 
 @media (max-width: 1024px){
-    .pressure, .wind{
-        display: none;
+    .weatherPanel{
+        aspect-ratio: auto;
+        grid-template-areas: "icon info"
+                             "icon info "
+                             "temp time";
     }
 }
 
 @media (max-width: 768px){
-    .weatherPanel{
-        width: 95%;
-        min-height: 50px;
-        grid-template-areas: "icon temp info"
-                             "icon time time";
-        grid-template-columns: .3fr .5fr 1.5fr;
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .weatherInfo{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .weatherInfo p{
-        width: 50%;
-        text-align: end;
-    }
-
-    .pressure, .wind{
-        display: initial;
-    }
 }
 
 @media (max-width: 640px){
-    .weatherPanel{
-        width: 95%;
-    }
+
 }
 
 @media (max-width: 450px){
-    .pressure, .wind{
-        display: none;
-    }
-    .weatherInfo{
-        flex-direction: column;
-    }
-    .weatherInfo p{
-        width: 100%;
+    .weatherPanel{
+        grid-template-areas: "icon temp"
+                             "info info"
+                             "time time";
+        opacity: 1;
     }
 }

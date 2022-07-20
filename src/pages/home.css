@@ -22,14 +22,8 @@
                          "principalSlider standarPublicity2";
     column-gap: 12px;
     row-gap: 2%;
-    width: 100%;
+    width: 90%;
     margin: 12px auto;
-}
-
-.homeMain .mainSection .publicityImage{
-    display: flex;
-    overflow: hidden;
-    aspect-ratio: 1/1;
 }
 
 .homeMain .mainSection .publicityImage a{
@@ -60,9 +54,8 @@
                          "programGrid oficialPublicity2";
     row-gap: 12px;
     column-gap: 12px;
-    width: 100%;
+    width: 90%;
     margin: 128px auto;
-
 }
 
 .homeMain .secondarySection .publicityImage:nth-child(1){
@@ -81,6 +74,14 @@
                              "standarPublicity1 standarPublicity2";
         width: 70%;
     }
+
+    .homeMain .secondarySection{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "programGrid programGrid "
+                             "weatherPanel weatherPanel "
+                             "oficialPublicity1 oficialPublicity2";
+    }
 }
 
 @media (max-width: 768px){
@@ -91,7 +92,6 @@
     .homeMain .mainSection{
         width: 90%;
     }
-
 
 }
 
@@ -106,7 +106,16 @@
         width: 90%;
     }
 
-    .homeMain .mainSection .publicityImage{
+    .homeMain .secondarySection{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "programGrid  "
+                             "weatherPanel"
+                             "oficialPublicity1"
+                             "oficialPublicity2";
+    }
+
+    .homeMain .publicityImage{
         width: 80%;
         margin: auto;
     }
