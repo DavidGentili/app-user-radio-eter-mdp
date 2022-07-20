@@ -32,6 +32,11 @@
 
 .mainSlider:hover .chevronLeft,
 .mainSlider:hover .chevronRight{
+    opacity: .7;
+}
+
+.mainSlider:hover .chevronLeft:hover,
+.mainSlider:hover .chevronRight:hover{
     opacity: 1;
 }
 

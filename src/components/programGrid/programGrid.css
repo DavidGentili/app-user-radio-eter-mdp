@@ -1,9 +1,51 @@
 .programGrid{
     grid-area: programGrid;
+    padding: 0 .5%;
+    overflow: hidden;
+    position: relative;
+}
+
+.programGrid button{
+    position: absolute;
+    width: 24px;
+    opacity: 0;
+    transition: .6s ease-in-out;
+}
+
+.programGrid:hover button{
+    opacity: .7;
+}
+
+.programGrid:hover button:hover{
+    opacity: 1;
+}
+
+.programGrid button .chevronIcon{
+    width: 100%;
+    fill: var(--lightBlue);
+}
+
+.programGrid .chevronLeft{
+    left: 0;
+    top: 50%;
+}
+
+.programGrid .chevronRight{
+    right: 0;
+    top: 50%;
+}
+
+.programGrid .contentDays{
+    display: flex;
+    width: 100%;
+    gap: 3%;
+    justify-content: flex-start;
+    transition: .6s ease-in-out;
 }
 
 .programGrid .gridDay{
-    width: 30%;
+    min-width: 30%;
+    
 }
 
 .programGrid .gridDay > h6{
@@ -22,17 +64,16 @@
 .programGrid .gridDay .program{
     display: flex;
     width: 100%;
-    height: 64px;
     align-items: flex-start;
     justify-content: space-between;
-    hyphens: auto;
+    hyphens: manual;
+    text-align: center;
     color: var(--black);
 }
 
 .programGrid .gridDay .program .hour{
     width: 30%;
     color: var(--lightBlack);
-    text-align: center;
     font-size: 16px;
     font-weight: 500;
     opacity: .8;
@@ -56,7 +97,6 @@
 }
 
 .programGrid .gridDay .program .line{
-    /* height: 100%; */
     height: calc(100% - 15px);
     width: 2px;
     background-color: var(--lightBlack);

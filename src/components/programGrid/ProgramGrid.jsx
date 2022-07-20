@@ -1,28 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './programGrid.css';
 import GridDay from './GridDay';
 
+import { ChevronLeftIcon, ChevronRightIcon } from '../Icons';
 
-const programs = [
-    [
-        {
-            name: 'nombre del programa',
-            startHour: '09:00',
-            finishHour: '12:00',
-        },
-        {
-            name: 'nombre del programa',
-            startHour: '12:00',
-            finishHour: '15:00',
-        },
-        {
-            name: 'nombre del programa',
-            startHour: '15:00',
-            finishHour: '17:00',
-        },
-    ]
-]
+import { programs, getInitialStateSliderGrid } from './utils';
+
 
 const daysValues = [
     {
@@ -57,11 +41,28 @@ const daysValues = [
 
 const ProgramGrid = () => {
 
+    const limit = 4;
+    const [sliderPosition, SetSliderPosition] = useState(getInitialStateSliderGrid());
+
+    const nextEvent = (e) => {
+        SetSliderPosition( (sliderPosition === limit ) ? 0 : sliderPosition + 1);
+    }
+
+    const prevEvent = (e) => {
+        SetSliderPosition( (sliderPosition === 0 ) ? limit : sliderPosition - 1);
+    }
+
+    console.log(sliderPosition)
+
     return (
         <div className='programGrid'>
-            {programs.map((value, index) => 
-                <GridDay key={daysValues[index].value} dayName={daysValues[index].text} programs={value} />
-            )}
+            <button className='chevronLeft' onClick={prevEvent} ><ChevronLeftIcon /></button>
+            <div className="contentDays" style={{transform : `translateX(${-33* sliderPosition }%)`}}>
+                {programs.map((value, index) => 
+                    <GridDay key={daysValues[index].value} dayName={daysValues[index].text} programs={value} />
+                )}
+            </div>
+            <button className='chevronRight' onClick={nextEvent} ><ChevronRightIcon /></button>
         </div>
     )
 }
