@@ -9,7 +9,8 @@ import WeatherPanel from '../components/weather/WeatherPanel';
 import Publicity from '../components/Publicity'
 import Footer from '../components/footer/Footer'
 import { getStandardPublicities, getOficialPublicities } from '../services/publicity'
-
+import { getHighlightedPrograms } from '../services/program'
+import Stream from '../../assets/ej-stream.png'
 
 import './home.css'
 
@@ -25,6 +26,21 @@ const initialPublicities = [
     },
 ]
 
+const initialSlider = [
+    {
+        urlImage : Stream,
+        name : 'standard'
+    },
+    {
+        urlImage : Stream,
+        name : 'standard'
+    },
+    {
+        urlImage : Stream,
+        name : 'standard'
+    }
+]
+
 const completePublicities = (data) => {
     const aux = [ ...initialPublicities];
     while(data.length < 2){
@@ -32,10 +48,24 @@ const completePublicities = (data) => {
     }
 }
 
+const completeSliderContent = (data) => {
+    const sliderContent = []
+    data.forEach(program => {
+        if(program.urlImage)
+            sliderContent.push(program)
+    });
+    const aux = [...initialSlider];
+    while(sliderContent.length < 3){
+        sliderContent.push(aux.shift());
+    }
+    return sliderContent;
+}
+
 const Home = () => {
 
-    const [standardPublicities, setStandardPublicities] = useState([])
-    const [oficialPublicities, setOficialPublicities] = useState([])
+    const [standardPublicities, setStandardPublicities] = useState([]);
+    const [oficialPublicities, setOficialPublicities] = useState([]);
+    const [mainSliderContent, setMainSliderContent] = useState([]);
 
     useEffect( () => {
         getStandardPublicities().then(data => {
@@ -53,21 +83,30 @@ const Home = () => {
         .catch()
     }, [])
 
+    useEffect(() => {
+        getHighlightedPrograms()
+        .then(({data}) => {
+            const sliderContent = completeSliderContent(data);
+            setMainSliderContent(sliderContent);
+        })
+        .catch(e => console.log(e)) 
+    }, [])
+
     return (
         <main className='homeMain'>
             <Header />
             <section className='mainSection'>
-                <MainSlider />
+                <MainSlider contentSlider={mainSliderContent} loading={mainSliderContent.length === 0 ? true : false} />
 
-                <Publicity publicity={standardPublicities[0]} />
-                <Publicity publicity={standardPublicities[1]} />
+                <Publicity publicity={standardPublicities[0]} loading={standardPublicities.length === 0 ? true : false} />
+                <Publicity publicity={standardPublicities[1]} loading={standardPublicities.length === 0 ? true : false} />
             </section>
 
             <section className="secondarySection">
                 <ProgramGrid />
                 <WeatherPanel className/>
-                <Publicity publicity={oficialPublicities[0]} />
-                <Publicity publicity={oficialPublicities[1]} />
+                <Publicity publicity={oficialPublicities[0]} loading={oficialPublicities.length === 0 ? true : false} />
+                <Publicity publicity={oficialPublicities[1]} loading={oficialPublicities.length === 0 ? true : false} />
 
             </section>
 

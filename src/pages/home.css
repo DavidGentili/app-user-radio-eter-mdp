@@ -1,8 +1,11 @@
 
 .homeMain .publicityImage{
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     aspect-ratio: 1/1;
+    transition: .5s;
 }
 
 .homeMain .publicityImage a{

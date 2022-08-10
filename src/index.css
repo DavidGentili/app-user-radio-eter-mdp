@@ -32,6 +32,14 @@ button{
     box-shadow: 0 0 15px #24242460;
 }
 
+.boxContainer.loading{
+    background: #F0F0F0;
+    background: linear-gradient(110deg, #ececec 8%, #fFf5f5 25%, #ececec 33%);
+    background-position: 0;
+    background-size: 200% 100%;
+    animation: loadingPanel 1.5s linear infinite;
+}
+
 /************* SPINNER *************/
 
 .spinner{
@@ -64,4 +72,10 @@ main{
 @keyframes rotate {
     from{transform: rotate(0deg);}
     to{transform: rotate(360deg);}
+}
+
+@keyframes loadingPanel {
+    to{
+        background-position-x: -200%;
+    }
 }
