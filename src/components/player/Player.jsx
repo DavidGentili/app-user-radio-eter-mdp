@@ -3,6 +3,7 @@ import ReactHlsPlayer from 'react-hls-player';
 
 import { PlayIcon, ChevronTopIcon, SoundIcon, MutedIcon, PauseIcon } from '../Icons';
 import Isotipo from '../../components/Isotipo'
+import { getCurrentProgram } from '../../services/programGrid';
 
 import './player.css';
 
@@ -11,6 +12,7 @@ const Player = () => {
     const [expanded, setExpanded] = useState(false);
     const [played, setPlayed] = useState(false);
     const [sound, setSound] = useState(true);
+    const [playerMessage, setPlayerMessage] = useState('');
     const [volume, setVolume] = useState(1);
     const playerRef = useRef(null);
     const spinnerRef = useRef(null);
@@ -46,6 +48,14 @@ const Player = () => {
         }
     }, [volume])
 
+    useEffect(() => {
+        getCurrentProgram()
+        .then(({data}) => {
+            const message = data.type ? data.name : data.message;
+            setPlayerMessage(message ? message : 'Radio Eter MDP');
+        })
+        .catch(e => console.log(e));
+    },[])
 
     return (
         <div className={"player" + (expanded ? ' expanded' : '')}>
@@ -55,7 +65,7 @@ const Player = () => {
                     <button className='soundBtn' onClick={handlerSound}> { sound ? <SoundIcon/> : <MutedIcon/> } </button>
                     <input onChange={(e) => {setVolume(e.target.value)}} type="range" min='0' max='1' step='0.05' defaultValue='100' name="" id="" />
                 </div>
-                <h6>Radio Eter MDP</h6>
+                <h6>{playerMessage}</h6>
                 <button onClick={() => {setExpanded(!expanded)}} className='expandBtn'> <ChevronTopIcon/></button>
                 <div className="playerWindow">
                     <ReactHlsPlayer
