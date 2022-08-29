@@ -39,7 +39,7 @@ const daysValues = [
     }
 ]
 
-const ProgramGrid = () => {
+const ProgramGrid = ({ programGrid }) => {
 
     const [sliderPosition, SetSliderPosition] = useState(getInitialStateSliderGrid());
 
@@ -53,13 +53,19 @@ const ProgramGrid = () => {
         SetSliderPosition( (sliderPosition === 0 ) ? limit : sliderPosition - 1);
     }
 
+
+
     return (
         <div className='programGrid'>
             <button className='chevronLeft' onClick={prevEvent} ><ChevronLeftIcon /></button>
             <div className="contentDays" style={{transform : `translateX(calc(var(--slide) * ${-sliderPosition }))`}}>
-                {programs.map((value, index) => 
-                    <GridDay key={daysValues[index].value} dayName={daysValues[index].text} programs={value} />
-                )}
+                {(programGrid && programGrid.length > 0) ? 
+                    programGrid.map((value, index) => 
+                        <GridDay key={daysValues[index].value} dayName={daysValues[index].text} programs={value} />
+                    )
+                    :
+                    <></>
+                }
             </div>
             <button className='chevronRight' onClick={nextEvent} ><ChevronRightIcon /></button>
         </div>

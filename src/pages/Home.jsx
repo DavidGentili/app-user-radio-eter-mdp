@@ -10,6 +10,7 @@ import Publicity from '../components/Publicity'
 import Footer from '../components/footer/Footer'
 import { getStandardPublicities, getOficialPublicities } from '../services/publicity'
 import { getHighlightedPrograms } from '../services/program'
+import { getProgramGrid } from '../services/programGrid'
 import Stream from '../../assets/ej-stream.png'
 
 import './home.css'
@@ -66,6 +67,7 @@ const Home = () => {
     const [standardPublicities, setStandardPublicities] = useState([]);
     const [oficialPublicities, setOficialPublicities] = useState([]);
     const [mainSliderContent, setMainSliderContent] = useState([]);
+    const [programGrid, setProgramGrid ] = useState([]);
 
     useEffect( () => {
         getStandardPublicities().then(data => {
@@ -92,6 +94,14 @@ const Home = () => {
         .catch(e => console.log(e)) 
     }, [])
 
+    useEffect(() => {
+        getProgramGrid()
+        .then(({data}) => {
+            setProgramGrid(data);
+        })
+        .catch(e => console.log(e));
+    }, [])
+
     return (
         <main className='homeMain'>
             <Header />
@@ -103,7 +113,7 @@ const Home = () => {
             </section>
 
             <section className="secondarySection">
-                <ProgramGrid />
+                <ProgramGrid programGrid={programGrid}/>
                 <WeatherPanel className/>
                 <Publicity publicity={oficialPublicities[0]} loading={oficialPublicities.length === 0 ? true : false} />
                 <Publicity publicity={oficialPublicities[1]} loading={oficialPublicities.length === 0 ? true : false} />

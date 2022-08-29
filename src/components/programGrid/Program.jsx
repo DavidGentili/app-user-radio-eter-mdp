@@ -1,21 +1,13 @@
 import React from 'react'
 
-const getHoursDifference = (start, finish) => {
-    const hours = finish.split(':')[0] - start.split(':')[0]; 
-    const minutes = (finish.split(':')[1] - start.split(':')[1]) / 60;
-    return hours + minutes;
-}
 
-const Program = ({program}) => {
+const Program = ({program, height}) => {
 
      
-    const { name, startHour, finishHour } = program;
-
-    getHoursDifference(startHour,finishHour)
-
+    const { name, startHour } = program;
 
     return (
-        <div className='program' style={ {height : `${getHoursDifference(startHour,finishHour) * 36}px`} }>
+        <div className='program' style={ {height : `${height * 36}px`} }>
             <p className='hour'>{startHour}</p>
             <span className='circle'></span>
             <p className="name">{name}</p>

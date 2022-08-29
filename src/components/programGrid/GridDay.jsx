@@ -3,6 +3,8 @@ import React from 'react'
 
 import Program from './Program'
 
+import { getHoursDifference } from './utils'
+
 const GridDay = ({programs, dayName}) => {
 
 
@@ -10,7 +12,11 @@ const GridDay = ({programs, dayName}) => {
         <div className='gridDay'>
             <h6>{dayName}</h6>
             {
-                programs.map((program, i) => <Program key={program.id || i} program={program}/>)
+                programs.map((program, i, array) => {
+                    const start = program.startHour;
+                    const finish = array[i+1] ? array[i+1].finishHour : program.finishHour;
+                    return <Program key={program.id || i} program={program} height={getHoursDifference(start, finish)} />
+                })
             }
         </div>
     )
