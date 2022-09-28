@@ -46,7 +46,9 @@ const Stream = () => {
             <div className="container">
                 <StreamWindow />
                 <div className="publicitySpace" ref={publicityRef}>
-                    <a className='individualPublicity publicity1' href="https://bit.ly/3r57rZC" target='_blank' rel='oopener noreferrer' >
+
+                    <a className='individualPublicity publicity1' href="https://bit.ly/3Qj9mEA" target='_blank' rel='oopener noreferrer' >
+
                         <img src={publicity1} alt="" />
                     </a>
                     <a className='individualPublicity publicity2' href="https://www.ciccus.org.ar/" target='_blank' rel='oopener noreferrer' >

@@ -2,22 +2,13 @@ nav{
     display: flex;
     width: 100%;
     justify-content: center;
-    z-index: 5;
+    z-index: 3;
     position: relative;
     padding: 16px;
-    margin-bottom: 12px;
-}
-
-.logotipo{
-    width: 128px;
-}
-
-.isologotipo{
-    display: none;
 }
 
 .brand{
-    width: 128px;
+    width: 96px;
 }
 
 @media (max-width: 1024px){
@@ -25,25 +16,12 @@ nav{
 }
 
 @media (max-width: 768px){
-    nav{
+    /* nav{
         background-color: var(--lightGrey);
         box-shadow: 0 10px 10px #24242430;
         padding: 12px;
         margin-bottom: 24px;
-    }
-
-    .brand{
-        width: 64px;
-    }
-
-    .logotipo{
-        display: none;
-    }
-
-    .isologotipo{
-        display: initial;
-    }
-
+    } */
 }
 
 @media (max-width: 640px){

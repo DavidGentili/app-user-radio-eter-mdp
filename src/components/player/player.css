@@ -1,0 +1,208 @@
+.player{
+    background-color: var(--white);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 96px;
+    padding: 12px;
+    box-shadow: 0px -10px 20px #24242460;
+    overflow: hidden;
+    transition: .6s .6s ease-in-out;
+    z-index: 99;
+}
+
+.player.expanded{
+    height: 100%;
+    padding: 48px 12px;
+    transition: .6s ease-in-out;
+}
+
+.player .isotipo{
+    opacity: 0;
+    fill: var(--lightBlue);
+    position: absolute;
+    width: 80%;
+    top: -40%;
+    right: -30%;
+    z-index: 1;
+    filter: blur(4px) drop-shadow(-30px 30px  0px #4BC1EAA0);
+    transition: .6s .6s ease-in-out;
+}
+
+.player.expanded .isotipo{
+    opacity: 1;
+    transition: .6s ease-in-out;
+}
+
+.player .playerContainer{
+    z-index: 2;
+    max-width: 1280px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.player .controls{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    gap: 12px;
+    left: 0;
+    bottom: 12px;
+    padding: 4px;
+    transition: .6s .6s ease-in-out;
+}
+
+.player.expanded .controls{
+    left: 50%;
+    bottom: 0;
+    transition: .6s ease-in-out;
+}
+
+.player .controls input{
+    width: 0;
+    opacity: 0;
+    transition: .6s;
+}
+
+.player .controls:hover input{
+    opacity: 1;
+    width: 100px;
+}
+
+.player button{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    transform: scale(1);
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+}
+
+.player button:hover{
+    transform: scale(1.1);
+}
+
+.player .playBtn{
+    padding: 12px;
+    background-color: var(--lightBlue);
+    border-radius: 100%;
+    fill: var(--white);
+}
+
+.player .soundBtn{
+    padding: 6px;
+    fill: var(--lightBlue);
+}
+
+.player .expandBtn{
+    position: absolute;
+    fill: var(--lightBlue);
+    padding: 6px;
+    right: 0;
+    top: 12px;
+    transition: transform .6s, fill .6s .6s ease-in-out;
+}
+
+.player.expanded .expandBtn{
+    transform: rotate(180deg);
+    fill: var(--white);
+    transition: .6s ease-in-out;
+
+}
+
+.player .mutedIcon{
+    fill: var(--lightBlack);
+}
+
+.player h6{
+    position: absolute;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--black);
+    text-align: center;
+    top: 20px;
+}
+
+.player .playerWindow{
+    max-width: 764px;
+    margin: auto;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    box-shadow: 0 0 20px #24242460;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: transform .3s .4s, opacity .4s;
+}
+
+.player.expanded .playerWindow{
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .3s, opacity .6s .6s;
+
+}
+
+.player .playerWindow video{
+    width: 100%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.player .playerWindow video.visible{
+    opacity: 1;
+}
+
+
+@media (max-width: 1024px){
+    .player .isotipo{
+        width: 100%;
+        top: 0%;
+        right: -30%;
+    }
+}
+
+@media (max-width: 768px){
+    .player .isotipo{
+        width: 130%;
+        right: -50%;
+    }
+}
+
+@media (max-width: 640px){
+    .player .controls .soundBtn{
+        display: none;
+    }
+
+    .player h6{
+        font-size: 20px;
+    }
+
+    .player .isotipo{
+        width: 180%;
+        right: -80%;
+    }
+}
+
+@media (max-width: 300px){
+    .player h6{
+        display: none;
+    }
+}
+
+
+
+
+
+
+

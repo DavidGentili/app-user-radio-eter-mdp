@@ -1,20 +1,21 @@
 footer{
-    padding-bottom: 100px;
-    position: relative;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    position: absolute;
+    left: 0;
     z-index: 2;
-    opacity: 0;
+    width: 100%;
     transition: 1s;
-}
-
-footer.visible{
-    opacity: 1;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--lightBlue);
+    box-shadow: 0 -5px 20px #24242440;
 }
 
 footer > img{
-    width: 256px;
+    width: 192px;
     display: flex;
-    margin: auto;
 }
 
 .socialMedias{
@@ -25,9 +26,9 @@ footer > img{
 
 .socialMedias a{
     display: flex;
-    width: 56px;
+    width: 52px;
     height: auto;
-    padding: 10px;
+    padding: 8px;
     margin: 8px 16px;
     background-color: #FFFFFF;
     border-radius: 50px;
@@ -44,4 +45,11 @@ footer > img{
 .socialMedias a img{
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 768px){
+    footer{
+        flex-direction: column;
+        
+    }
 }
