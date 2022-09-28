@@ -19,11 +19,11 @@ import './home.css'
 const initialPublicities = [
     {
         urlImage: publicity1,
-        link: "#"
+        link: "https://bit.ly/3r57rZC"
     },
     {
         urlImage: publicity2,
-        link: "#"
+        link: "https://www.ciccus.org.ar/"
     },
 ]
 
