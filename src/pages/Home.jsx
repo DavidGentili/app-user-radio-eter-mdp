@@ -11,7 +11,9 @@ import Footer from '../components/footer/Footer'
 import { getStandardPublicities, getOficialPublicities } from '../services/publicity'
 import { getHighlightedPrograms } from '../services/program'
 import { getProgramGrid } from '../services/programGrid'
-import Stream from '../../assets/ej-stream.png'
+import slider1 from '../../assets/slider-1.jpg'
+import slider2 from '../../assets/slider-2.jpg'
+
 
 import './home.css'
 
@@ -29,16 +31,12 @@ const initialPublicities = [
 
 const initialSlider = [
     {
-        urlImage : Stream,
-        name : 'standard'
+        urlImage : slider1,
+        name : 'slider-standard-1'
     },
     {
-        urlImage : Stream,
-        name : 'standard'
-    },
-    {
-        urlImage : Stream,
-        name : 'standard'
+        urlImage : slider2,
+        name : 'slider-standard-2'
     }
 ]
 
@@ -56,7 +54,7 @@ const completeSliderContent = (data) => {
             sliderContent.push(program)
     });
     const aux = [...initialSlider];
-    while(sliderContent.length < 3){
+    while(sliderContent.length < 3 && aux.length > 0){
         sliderContent.push(aux.shift());
     }
     return sliderContent;

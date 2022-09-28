@@ -6,7 +6,7 @@ import './mainSlider.css'
 
 const MainSlider = ({ contentSlider, loading }) => {
 
-    const limit = 2;
+    const limit = 1;
     const [sliderPosition, SetSliderPosition] = useState(0);
 
     const nextEvent = (e) => {
