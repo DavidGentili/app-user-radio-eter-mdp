@@ -4,6 +4,7 @@ import ReactHlsPlayer from 'react-hls-player';
 import { PlayIcon, ChevronTopIcon, SoundIcon, MutedIcon, PauseIcon } from '../Icons';
 import Isotipo from '../../components/Isotipo'
 import { getCurrentProgram } from '../../services/programGrid';
+import { mediaPlayerUrl } from '../../services/config';
 
 import './player.css';
 
@@ -70,7 +71,7 @@ const Player = () => {
                 <div className="playerWindow">
                     <ReactHlsPlayer
                         className='hls-player'
-                        src='https://59537faa0729a.streamlock.net:443/radioetermdp/radioetermdp/playlist.m3u8'
+                        src={ mediaPlayerUrl }
                         autoPlay = {false}
                         width = '100%'
                         height= 'auto'
