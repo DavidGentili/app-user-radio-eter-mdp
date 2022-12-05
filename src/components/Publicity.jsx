@@ -5,7 +5,7 @@ const Publicity = ({ publicity, loading }) => {
         <div className={`publicityImage boxContainer ${loading && 'loading'}`}>
             { publicity && 
                 <a href={publicity.link}>
-                    <img className='publicityImage' src={publicity.urlImage} alt={publicity.altText || 'Radio Eter Mdp'} loading='lazy' />
+                    <img className='' src={publicity.urlImage} alt={publicity.altText || 'Radio Eter Mdp'} loading='lazy' />
                 </a>
             }
         </div>

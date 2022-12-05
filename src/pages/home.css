@@ -4,40 +4,35 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.125/1;
     transition: .5s;
-}
-
-.homeMain .publicityImage a{
-    width: 100%;
-    height: 100%;
-}
-
-.homeMain .publicityImage img{
-    width: 100%;
-    height: auto;
 }
 
 .homeMain .mainSection{
     display: grid;
-    grid-template-columns: .75fr .25fr;
+    grid-template-columns: .73fr .27fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "principalSlider standarPublicity1"
                          "principalSlider standarPublicity2";
     column-gap: 12px;
+    align-items: center;
     row-gap: 2%;
     width: 90%;
     margin: 12px auto;
 }
 
-.homeMain .mainSection .publicityImage a{
+.homeMain  .publicityImage a{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.homeMain .mainSection .publicityImage img{
-    width: 100%;
-    height: auto;
+.homeMain .publicityImage img{
+    width: auto;
+    height: 100%;
 }
 
 .homeMain .mainSection .publicityImage:nth-child(1){
