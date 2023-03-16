@@ -1,11 +1,4 @@
-.mainSlider img{
-    display: flex;
-    flex-shrink: 0;
-    width: 100%;
-    aspect-ratio: 75/52;
-}
-
-.mainSection .mainSlider{
+.mainSlider {
     position: relative;
     overflow: hidden;
     grid-area: principalSlider;
@@ -14,7 +7,14 @@
     align-items: center;
 }
 
-.mainSection .imageContainer{
+.mainSlider img {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 75/52;
+}
+
+.mainSlider .imageContainer {
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -23,7 +23,7 @@
 }
 
 .mainSlider .chevronLeft,
-.mainSlider .chevronRight{
+.mainSlider .chevronRight {
     position: absolute;
     z-index: 2;
     opacity: 0;
@@ -31,33 +31,34 @@
 }
 
 .mainSlider:hover .chevronLeft,
-.mainSlider:hover .chevronRight{
+.mainSlider:hover .chevronRight {
     opacity: .7;
 }
 
 .mainSlider:hover .chevronLeft:hover,
-.mainSlider:hover .chevronRight:hover{
+.mainSlider:hover .chevronRight:hover {
     opacity: 1;
 }
 
-.mainSlider .chevronIcon{
+.mainSlider .chevronIcon {
     width: 22px;
     margin: 4px;
     fill: var(--white);
 }
 
-.mainSlider .chevronLeft{
+.mainSlider .chevronLeft {
     left: 8px;
 }
 
-.mainSlider .chevronRight{
+.mainSlider .chevronRight {
     right: 8px;
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
+
     .mainSlider .chevronLeft,
-    .mainSlider .chevronRight{
+    .mainSlider .chevronRight {
         opacity: 1;
     }
 }

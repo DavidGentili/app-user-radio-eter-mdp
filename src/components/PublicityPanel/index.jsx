@@ -8,9 +8,6 @@ import { getOficialPublicities } from '@services/publicity';
 
 export default function PublicityPanel({ horizontal, oficialPublicities }) {
 
-    const [isLoading, setLoading] = useState(false);
-
-
     return (
         <article className={`publicityPanel ${horizontal ? 'horizontal' : ''}`}>
             <WeatherPanel />

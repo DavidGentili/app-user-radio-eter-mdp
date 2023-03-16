@@ -6,6 +6,8 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@components/Icons';
 
 import { getInitialStateSliderGrid, getLimit } from '@helpers/programGrid';
 
+import { getProgramGrid } from '@services/programGrid';
+
 
 const daysValues = [
     { value: 'monday', text: 'Lunes' },
@@ -17,9 +19,19 @@ const daysValues = [
     { value: 'sunday', text: 'Domingo' }
 ]
 
-const ProgramGrid = ({ programGrid }) => {
+const ProgramGrid = () => {
 
     const [sliderPosition, SetSliderPosition] = useState(getInitialStateSliderGrid());
+    const [programGrid, setProgramGrid] = useState([]);
+
+
+    useEffect(() => {
+        getProgramGrid()
+            .then(({ data }) => {
+                setProgramGrid(data);
+            })
+            .catch(e => console.log(e));
+    }, [])
 
     const nextEvent = (e) => {
         const limit = getLimit();

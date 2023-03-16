@@ -20,6 +20,7 @@ import '@styles/general/publicity.css'
 import '@styles/home/home.css';
 import '@styles/home/programGrid.css';
 import '@styles/home/mainSlider.css';
+import '@styles/home/reportSection.css';
 
 ReactDOM.render(
     <React.StrictMode>

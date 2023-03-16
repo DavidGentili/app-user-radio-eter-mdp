@@ -1,0 +1,118 @@
+.reportSection {
+    height: 80vh;
+    display: grid;
+}
+
+.reportSection .reports {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.reportSection .report {
+    flex: 1;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 32px;
+    padding: 32px 16px;
+    color: var(--white);
+    position: relative;
+}
+
+.reportSection .report .info {
+    position: relative;
+    height: 40%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.reportSection .report .info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.reportSection .report .info p {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 50%;
+
+}
+
+
+.reportSection .report .filter {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(7deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0) 100%);
+}
+
+.reportSection .report:hover {
+    flex: 1 1 30%;
+}
+
+.reportSection .report span {
+    display: flex;
+}
+
+.reportSection .report:hover a {
+    opacity: 1;
+}
+
+.reportSection .report a {
+    display: flex;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 3px;
+    opacity: 0;
+}
+
+.reportSection .report a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+}
+
+.reportSection .report a:hover {
+    color: var(--lightBlue);
+}
+
+.reportSection .report a:hover::after {
+    background: var(--lightBlue);
+}
+
+
+.reportSection>a {
+    display: flex;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 24px;
+    background-color: var(--lightBlue);
+    border: 3px solid var(--lightBlue);
+    color: var(--white);
+}
+
+.reportSection>a:hover {
+    background: none;
+    color: var(--lightBlue);
+}

@@ -1,4 +1,4 @@
-.homePage .mainSection {
+.homePage .sliderSection {
     display: grid;
     grid-template-columns: .73fr .27fr;
     grid-template-rows: 1fr 1fr;
@@ -7,33 +7,30 @@
     column-gap: 12px;
     align-items: center;
     row-gap: 2%;
-    width: 90%;
-    margin: 12px auto;
 }
 
 
-.homePage .mainSection .publicity:nth-child(1) {
+
+.homePage .sliderSection .publicity:nth-child(1) {
     grid-area: standarPublicity1;
 }
 
-.homePage .mainSection .publicity:nth-child(2) {
+.homePage .sliderSection .publicity:nth-child(2) {
     grid-area: standarPublicity2;
 }
 
 
-.homePage .secondarySection {
+.homePage .gridSection {
     display: grid;
     grid-template-columns: 75fr 25fr;
     row-gap: 12px;
     column-gap: 12px;
-    width: 90%;
-    margin: 128px auto;
 }
 
 
 @media (max-width: 1024px) {
 
-    .homePage .mainSection {
+    .homePage .sliderSection {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "principalSlider principalSlider"
@@ -41,28 +38,28 @@
         width: 70%;
     }
 
-    .homePage .secondarySection {
+    .homePage .gridSection {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
 }
 
 @media (max-width: 768px) {
-    .homePage .secondarySection {
+    .homePage .gridSection {
         width: 80%;
     }
 
 }
 
 @media (max-width: 640px) {
-    .homePage .mainSection {
+    .homePage .sliderSection {
         width: 90%;
     }
 
 }
 
 @media (max-width: 420px) {
-    .homePage .mainSection {
+    .homePage .sliderSection {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "principalSlider"
@@ -73,7 +70,7 @@
     }
 
 
-    .homePage .publicityImage {
+    .homePage .publicity {
         width: 80%;
         margin: auto;
     }

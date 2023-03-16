@@ -67,11 +67,10 @@ a {
     display: none;
 }
 
-main{
-    max-width: 1024px;
-    margin: auto;
+section {
+    width: var(--container);
+    margin: 10vh auto;
 }
-
 
 /************* ANIMATIONS *************/
 
