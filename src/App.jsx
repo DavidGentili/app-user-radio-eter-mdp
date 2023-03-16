@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from '@pages/home';
-import Player from '@components/generals/player';
+import Player from '@components/generals/Player';
 
 import Header from '@components/generals/Header'
 import Footer from '@components/generals/Footer'
