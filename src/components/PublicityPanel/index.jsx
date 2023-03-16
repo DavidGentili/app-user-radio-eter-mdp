@@ -6,29 +6,16 @@ import WeatherPanel from './WeatherPanel';
 import { completePublicities } from '@helpers/publicity';
 import { getOficialPublicities } from '@services/publicity';
 
-export default function PublicityPanel({ horizontal }) {
+export default function PublicityPanel({ horizontal, oficialPublicities }) {
 
-    const [oficialPublicities, setOficialPublicities] = useState([]);
     const [isLoading, setLoading] = useState(false);
 
-    useEffect(() => {
-        setLoading(true);
-        getOficialPublicities()
-            .then(data => {
-                completePublicities(data);
-                setOficialPublicities(data);
-            })
-            .catch()
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [])
 
     return (
         <article className={`publicityPanel ${horizontal ? 'horizontal' : ''}`}>
             <WeatherPanel />
-            <Publicity publicity={oficialPublicities[0]} loading={isLoading} />
-            <Publicity publicity={oficialPublicities[1]} loading={isLoading} />
+            <Publicity publicity={oficialPublicities[0]} loading={oficialPublicities.length > 0} />
+            <Publicity publicity={oficialPublicities[1]} loading={oficialPublicities.length > 0} />
 
         </article>
     )

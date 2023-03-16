@@ -14,12 +14,12 @@ import { completePublicities } from '../../helpers/publicity';
 
 const initialSlider = [
     {
-        urlImage : slider1,
-        name : 'slider-standard-1'
+        urlImage: slider1,
+        name: 'slider-standard-1'
     },
     {
-        urlImage : slider2,
-        name : 'slider-standard-2'
+        urlImage: slider2,
+        name: 'slider-standard-2'
     }
 ]
 
@@ -27,46 +27,37 @@ const initialSlider = [
 const completeSliderContent = (data) => {
     const sliderContent = []
     data.forEach(program => {
-        if(program.urlImage)
+        if (program.urlImage)
             sliderContent.push(program)
     });
     const aux = [...initialSlider];
-    while(sliderContent.length < 3 && aux.length > 0){
+    while (sliderContent.length < 3 && aux.length > 0) {
         sliderContent.push(aux.shift());
     }
     return sliderContent;
 }
 
-const Home = () => {
+const Home = ({ standardPublicities, oficialPublicities }) => {
 
-    const [standardPublicities, setStandardPublicities] = useState([]);
     const [mainSliderContent, setMainSliderContent] = useState([]);
-    const [programGrid, setProgramGrid ] = useState([]);
-
-    useEffect( () => {
-        getStandardPublicities().then(data => {
-            completePublicities(data);
-            setStandardPublicities(data);
-        })
-        .catch()
-    }, [])
+    const [programGrid, setProgramGrid] = useState([]);
 
 
     useEffect(() => {
         getHighlightedPrograms()
-        .then(({data}) => {
-            const sliderContent = completeSliderContent(data);
-            setMainSliderContent(sliderContent);
-        })
-        .catch(e => console.log(e)) 
+            .then(({ data }) => {
+                const sliderContent = completeSliderContent(data);
+                setMainSliderContent(sliderContent);
+            })
+            .catch(e => console.log(e))
     }, [])
 
     useEffect(() => {
         getProgramGrid()
-        .then(({data}) => {
-            setProgramGrid(data);
-        })
-        .catch(e => console.log(e));
+            .then(({ data }) => {
+                setProgramGrid(data);
+            })
+            .catch(e => console.log(e));
     }, [])
 
     return (
@@ -80,9 +71,9 @@ const Home = () => {
             </section>
 
             <section className="secondarySection">
-                <ProgramGrid programGrid={programGrid}/>
-                
-                <PublicityPanel/>
+                <ProgramGrid programGrid={programGrid} />
+
+                <PublicityPanel {...{oficialPublicities}}/>
 
             </section>
 
