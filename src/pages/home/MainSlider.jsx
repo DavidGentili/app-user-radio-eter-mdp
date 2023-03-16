@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-import { ChevronLeftIcon, ChevronRightIcon } from '../Icons';
+import { ChevronLeftIcon, ChevronRightIcon } from '@components/Icons';
 
-import './mainSlider.css'
 
 const MainSlider = ({ contentSlider, loading }) => {
 

@@ -8,7 +8,6 @@
                          "time time";
     padding: 12px;
     color: var(--white);
-    grid-area: weatherPanel;
     transition: 1.5s;
     border-radius: 12px;
     aspect-ratio: 1/1;

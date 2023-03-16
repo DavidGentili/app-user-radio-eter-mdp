@@ -1,15 +1,13 @@
 import { React, forwardRef } from 'react';
 
 
-import logotipoWhiteGreen from '../../../assets/logotipo-w-g.png';
-import facebook from '../../../assets/socialMedia/facebook.png';
-import instagram from '../../../assets/socialMedia/instagram.png';
-import twitter from '../../../assets/socialMedia/twitter.png';
-import youtube from '../../../assets/socialMedia/youtube.png';
+import logotipoWhiteGreen from '@assets/logotipo-w-g.png';
+import facebook from '@assets/socialMedia/facebook.png';
+import instagram from '@assets/socialMedia/instagram.png';
+import twitter from '@assets/socialMedia/twitter.png';
+import youtube from '@assets/socialMedia/youtube.png';
 
 
-
-import './footer.css'
 
 const Footer = forwardRef((props, ref) => {
     return(

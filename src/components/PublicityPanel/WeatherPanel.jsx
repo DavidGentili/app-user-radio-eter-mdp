@@ -1,7 +1,6 @@
 import { React, useState, useEffect, forwardRef } from 'react';
-import  weatherAPI from '../../services/weatherAPI'
+import  weatherAPI from '@services/weatherAPI'
 
-import './weatherPanel.css'
 
 const WeatherPanel = forwardRef((props, ref) => {
 

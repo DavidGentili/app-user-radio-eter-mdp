@@ -1,33 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Header from '../components/header/Header'
-
-import publicity1 from '../../assets/publicity-1.gif'
-import publicity2 from '../../assets/publicity-2.gif'
-import MainSlider from '../components/mainSlider/MainSlider'
-import ProgramGrid from '../components/programGrid/ProgramGrid'
-import WeatherPanel from '../components/weather/WeatherPanel';
-import Publicity from '../components/Publicity'
-import Footer from '../components/footer/Footer'
-import { getStandardPublicities, getOficialPublicities } from '../services/publicity'
-import { getHighlightedPrograms } from '../services/program'
-import { getProgramGrid } from '../services/programGrid'
-import slider1 from '../../assets/slider-1.jpg'
-import slider2 from '../../assets/slider-2.jpg'
 
 
-import './home.css'
-
-
-const initialPublicities = [
-    {
-        urlImage: publicity1,
-        link: "https://bit.ly/3r57rZC"
-    },
-    {
-        urlImage: publicity2,
-        link: "https://www.ciccus.org.ar/"
-    },
-]
+import MainSlider from './MainSlider'
+import ProgramGrid from './ProgramGrid'
+import Publicity from '../../components/Publicity'
+import { getStandardPublicities, getOficialPublicities } from '@services/publicity'
+import { getHighlightedPrograms } from '@services/program'
+import { getProgramGrid } from '@services/programGrid'
+import slider1 from '@assets/slider-1.jpg'
+import slider2 from '@assets/slider-2.jpg'
+import PublicityPanel from '@components/PublicityPanel';
+import { completePublicities } from '../../helpers/publicity';
 
 const initialSlider = [
     {
@@ -40,12 +23,6 @@ const initialSlider = [
     }
 ]
 
-const completePublicities = (data) => {
-    const aux = [ ...initialPublicities];
-    while(data.length < 2){
-        data.push(aux.shift());
-    }
-}
 
 const completeSliderContent = (data) => {
     const sliderContent = []
@@ -63,7 +40,6 @@ const completeSliderContent = (data) => {
 const Home = () => {
 
     const [standardPublicities, setStandardPublicities] = useState([]);
-    const [oficialPublicities, setOficialPublicities] = useState([]);
     const [mainSliderContent, setMainSliderContent] = useState([]);
     const [programGrid, setProgramGrid ] = useState([]);
 
@@ -75,13 +51,6 @@ const Home = () => {
         .catch()
     }, [])
 
-    useEffect( () => {
-        getOficialPublicities().then(data => {
-            completePublicities(data);
-            setOficialPublicities(data);
-        })
-        .catch()
-    }, [])
 
     useEffect(() => {
         getHighlightedPrograms()
@@ -101,8 +70,8 @@ const Home = () => {
     }, [])
 
     return (
-        <main className='homeMain'>
-            <Header />
+        <main className='homePage'>
+
             <section className='mainSection'>
                 <MainSlider contentSlider={mainSliderContent} loading={mainSliderContent.length === 0 ? true : false} />
 
@@ -112,13 +81,10 @@ const Home = () => {
 
             <section className="secondarySection">
                 <ProgramGrid programGrid={programGrid}/>
-                <WeatherPanel className/>
-                <Publicity publicity={oficialPublicities[0]} loading={oficialPublicities.length === 0 ? true : false} />
-                <Publicity publicity={oficialPublicities[1]} loading={oficialPublicities.length === 0 ? true : false} />
+                
+                <PublicityPanel/>
 
             </section>
-
-            <Footer />
 
         </main>
     )

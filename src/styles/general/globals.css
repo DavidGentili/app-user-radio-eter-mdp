@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: .6s;
 }
 
 :root{
@@ -20,12 +21,17 @@
     --instagramColor: #E1306C;
     --twitterColor: #1da1f2;
     --youtubeColor: #ff0000;
+    --container: calc(1024px + 0px)
 }
 
 button{
     cursor: pointer;
     background: none;
     border: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .boxContainer{

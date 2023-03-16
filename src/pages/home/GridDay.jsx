@@ -3,7 +3,7 @@ import React from 'react'
 
 import Program from './Program'
 
-import { getHoursDifference } from './utils'
+import { getHoursDifference } from '@helpers/programGrid'
 
 const GridDay = ({programs, dayName}) => {
 

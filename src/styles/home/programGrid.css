@@ -1,6 +1,5 @@
 .programGrid{
     width: 100%;
-    grid-area: programGrid;
     padding: 0 .5%;
     overflow: hidden;
     position: relative;
@@ -67,7 +66,7 @@
 .programGrid .gridDay .program{
     display: flex;
     width: 100%;
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: space-between;
     hyphens: manual;
     text-align: center;

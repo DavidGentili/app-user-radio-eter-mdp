@@ -5,7 +5,7 @@
     aspect-ratio: 75/52;
 }
 
-.homeMain .mainSection .mainSlider{
+.mainSection .mainSlider{
     position: relative;
     overflow: hidden;
     grid-area: principalSlider;
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.homeMain .mainSection .imageContainer{
+.mainSection .imageContainer{
     display: flex;
     justify-content: flex-start;
     width: 100%;
