@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Publicity from '@components/publicity';
+import Publicity from '@components/Publicity';
 import MainSlider from '@components/home/MainSlider';
 import useHighligthedProgram from '@hooks/useHighligthedProgram';
 
