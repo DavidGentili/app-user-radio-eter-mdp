@@ -1,0 +1,122 @@
+.reportSlider {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.reportSlider .sliderContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.reportSlider .sliderContainer .content {
+    transform: translateX(-200vw);
+}
+
+.reportSlider .sliderContainer .content {
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.reportSlider .sliderContainer .content .sliderContain {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15vh 10vw;
+}
+
+.reportSlider .sliderContainer .content .filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 4;
+}
+
+
+.reportSlider .sliderContainer .content .sliderContain .info {
+    position: relative;
+    z-index: 4;
+}
+
+.reportSlider .sliderContainer .content .sliderContain h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+
+.reportSlider .controls {
+    position: absolute;
+    display: flex;
+    width: var(--container);
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    margin: auto;
+}
+
+.reportSlider .controls button {
+    fill: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    opacity: .6;
+    padding: 8px;
+    border-radius: 100%;
+}
+
+.reportSlider .controls button:hover {
+    opacity: 1;
+    background-color: #FFFFFF30;
+}
+
+.reportSlider .controls .index {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 5vh;
+    width: 100%;
+}
+
+.reportSlider .controls .index .container {
+    display: flex;
+    gap: 12px;
+}
+
+.reportSlider .controls .index button {
+    width: 72px;
+    height: 8px;
+    padding: 0;
+    border-radius: 12px;
+    background-color: var(--white);
+    opacity: 1;
+    background: none;
+    border: 1px solid var(--white);
+}
+
+.reportSlider .controls .index button:hover,
+.reportSlider .controls .index button.active {
+    background-color: var(--white);
+}

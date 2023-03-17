@@ -22,6 +22,14 @@ import '@styles/home/programGrid.css';
 import '@styles/home/mainSlider.css';
 import '@styles/home/reportSection.css';
 
+//Styñes Reports
+import '@styles/reports/reports.css'
+import '@styles/reports/reportSlider.css'
+import '@styles/reports/allReports.css'
+
+
+
+
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>

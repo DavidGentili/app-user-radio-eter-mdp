@@ -1,6 +1,8 @@
 .reportSection {
     height: 80vh;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 }
 
 .reportSection .reports {
@@ -26,7 +28,6 @@
 
 .reportSection .report .info {
     position: relative;
-    height: 40%;
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -42,13 +43,6 @@
     text-overflow: ellipsis;
 }
 
-.reportSection .report .info p {
-    font-size: 14px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 50%;
-
-}
 
 
 .reportSection .report .filter {
@@ -115,4 +109,29 @@
 .reportSection>a:hover {
     background: none;
     color: var(--lightBlue);
+}
+
+@media (max-width : 1024px) {
+    .reportSection {
+        height: auto;
+    }
+
+    .reportSection .reports {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .reportSection .reports .report {
+        aspect-ratio: 4/3;
+    }
+
+    .reportSection .reports .report a {
+        opacity: 1;
+        color: var(--lightBlue);
+    }
+
+    .reportSection .reports .report a::after {
+        background-color: var(--lightBlue);
+    }
 }

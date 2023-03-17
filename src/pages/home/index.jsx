@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 //Components
 import SliderSection from './SliderSection';
 import GridSection from './GridSection';
-import ReportsSecitons from './ReportsSecitons';
+import ReportsSecitons from './ReportsSections';
 
 
 

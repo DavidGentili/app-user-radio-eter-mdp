@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     aspect-ratio: 1.125/1;
     transition: .5s;
 }
@@ -14,9 +13,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .publicity img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }

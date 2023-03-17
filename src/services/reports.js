@@ -7,7 +7,7 @@ export async function getReports(id) {
         if (id)
             params.id = id
         const { data } = await instance.get('/report', { params });
-        return data.slice(0,3);
+        return data;
     } catch (e) {
 
     }

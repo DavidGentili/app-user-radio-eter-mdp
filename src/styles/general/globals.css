@@ -1,4 +1,6 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
     font-family: 'Roboto', 'Segoe-UI', sans-serif;
     padding: 0;
     margin: 0;
@@ -6,7 +8,11 @@
     transition: .6s;
 }
 
-:root{
+body {
+    color: var(--black);
+}
+
+:root {
     --purple: #B67DEF;
     --lightBlue: #4BC1EA;
     --pink: #FF90E8;
@@ -24,7 +30,7 @@
     --container: calc(1024px + 0px)
 }
 
-button{
+button {
     cursor: pointer;
     background: none;
     border: none;
@@ -34,11 +40,16 @@ a {
     text-decoration: none;
 }
 
-.boxContainer{
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.boxContainer {
     box-shadow: 0 0 15px #24242460;
 }
 
-.boxContainer.loading{
+.boxContainer.loading {
     background: #F0F0F0;
     background: linear-gradient(110deg, #ececec 8%, #fFf5f5 25%, #ececec 33%);
     background-position: 0;
@@ -48,7 +59,7 @@ a {
 
 /************* SPINNER *************/
 
-.spinner{
+.spinner {
     position: absolute;
     z-index: 3;
     width: 64px;
@@ -63,7 +74,7 @@ a {
     transform: 1s;
 }
 
-.spinner.hidden{
+.spinner.hidden {
     display: none;
 }
 
@@ -72,15 +83,33 @@ section {
     margin: 10vh auto;
 }
 
+
+@media (max-width : 1024px) {
+    section {
+        width: 70%;
+    }
+}
+
+@media (max-width : 640px) {
+    section {
+        width: 90%;
+    }
+}
+
 /************* ANIMATIONS *************/
 
 @keyframes rotate {
-    from{transform: rotate(0deg);}
-    to{transform: rotate(360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes loadingPanel {
-    to{
+    to {
         background-position-x: -200%;
     }
 }

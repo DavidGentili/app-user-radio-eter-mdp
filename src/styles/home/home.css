@@ -1,3 +1,8 @@
+.homePage {
+    padding: 5vh 0;
+}
+
+
 .homePage .sliderSection {
     display: grid;
     grid-template-columns: .73fr .27fr;
@@ -35,7 +40,6 @@
         grid-template-rows: 1fr;
         grid-template-areas: "principalSlider principalSlider"
             "standarPublicity1 standarPublicity2";
-        width: 70%;
     }
 
     .homePage .gridSection {
@@ -51,12 +55,6 @@
 
 }
 
-@media (max-width: 640px) {
-    .homePage .sliderSection {
-        width: 90%;
-    }
-
-}
 
 @media (max-width: 420px) {
     .homePage .sliderSection {
@@ -66,7 +64,6 @@
             "standarPublicity1"
             "standarPublicity2";
         row-gap: 24px;
-        width: 90%;
     }
 
 

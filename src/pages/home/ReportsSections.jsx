@@ -12,7 +12,7 @@ export default function ReportsSecitons() {
     useEffect(() => {
         getReports()
             .then(res => {
-                setReports(res);
+                setReports(res.slice(0,3));
             })
             .catch(e => {
             });

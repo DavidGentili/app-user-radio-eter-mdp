@@ -11,7 +11,6 @@ export default function ReportofMain({ report }) {
             <span className='filter'></span>
             <div className="info">
                 <h3>{title}</h3>
-                <p>{description}</p>
                 <span><Link to={`/informes/${id}`}>Seguir leyendo</Link></span>
             </div>
         </div>
