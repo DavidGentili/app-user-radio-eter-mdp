@@ -122,3 +122,19 @@
 .allReportsSection .controls button:hover{
     opacity: 1;
 }
+
+@media (max-width: 1024px) {
+    .allReportsSection .reports {
+        grid-template-columns: 1fr;
+    }
+
+    .allReportsSection .reports .report a {
+        opacity: 1;
+    }
+}
+
+@media (max-width : 640px) {
+    .allReportsSection .reports .report {
+        aspect-ratio: 4/3;
+    }
+}

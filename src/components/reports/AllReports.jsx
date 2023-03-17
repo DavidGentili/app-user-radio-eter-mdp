@@ -19,7 +19,7 @@ export default function AllReports({ reports }) {
         if (page > 0)
             setPage(page - 1);
     }
-    
+
     useEffect(() => {
         const base = page * REPORT_PER_PAGE;
         setSelectedReports(reports.slice(base, base + REPORT_PER_PAGE));
@@ -35,7 +35,7 @@ export default function AllReports({ reports }) {
                         <span className='filter'></span>
                         <div className="info">
                             <h3>{title}</h3>
-                            <p>{description}</p>
+                            <p>{description.slice(0, 140) + (description.length > 140 ? '...' : '')}</p>
                             <span><Link to={`/informes/${id}`}>Seguir leyendo</Link></span>
                         </div>
                     </div>)
