@@ -20,13 +20,18 @@ export default function ReportsSecitons() {
 
 
     return (
-        <section className="reportSection">
-            <div className="reports">
-                {reports.length > 0 &&
-                    reports.map(report => <ReportofMain key={report.id} report={report} />)
-                }
-            </div>
-            <Link to='./informes'>Ver más</Link>
-        </section>
+        <>
+            {reports && reports.length > 0 &&
+                <section className="reportSection">
+                    <div className="reports">
+                        {reports.length > 0 &&
+                            reports.map(report => <ReportofMain key={report.id} report={report} />)
+                        }
+                    </div>
+                    <Link to='./informes'>Ver más</Link>
+                </section>
+
+            }
+        </>
     )
 }

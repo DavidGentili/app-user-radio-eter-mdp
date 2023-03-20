@@ -24,7 +24,6 @@ const ProgramGrid = () => {
     const [sliderPosition, SetSliderPosition] = useState(getInitialStateSliderGrid());
     const [programGrid, setProgramGrid] = useState([]);
 
-
     useEffect(() => {
         getProgramGrid()
             .then(({ data }) => {

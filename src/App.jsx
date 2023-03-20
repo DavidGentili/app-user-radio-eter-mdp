@@ -8,6 +8,7 @@ import Footer from '@components/generals/Footer'
 import usePublicies from './hooks/usePublicities';
 import PanelReport from './pages/reports/PanelReport';
 import SingleReport from './pages/reports/SingleReport';
+import ErrorPage from './components/ErrorPage';
 
 function App() {
 
@@ -19,14 +20,18 @@ function App() {
         <div className="App">
             <Header />
             <Routes location={location} key={location.pathname} >
-                <Route path='' element={<Home {...{ oficialPublicities, standardPublicities }} />} />
-                <Route path='informes' element={<PanelReport {...{ oficialPublicities, standardPublicities }} />} />
-                <Route path='/informes/:reportId' element={<SingleReport />} />
+                <Route index element={<Home {...{ oficialPublicities, standardPublicities }} />} />
 
+                <Route path='informes'>
+                    <Route index element={<PanelReport {...{ oficialPublicities, standardPublicities }} />} />
+                    <Route path=':reportId' element={<SingleReport />} />
+                </Route>
+
+                <Route path='*' element={<ErrorPage />} />
             </Routes>
 
             <Footer />
-            {/* <Player/> */}
+            <Player />
         </div>
     )
 }
