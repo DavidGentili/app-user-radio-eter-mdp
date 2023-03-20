@@ -23,7 +23,7 @@ export default function ReportSlider({ reports }) {
     return (
         <section className='reportSlider'>
             <div className='sliderContainer'>
-                <div className="content" style={{ transform: `translateX(${-100 * index}vw)` }}>
+                <div className="content" style={{ transform: `translateX(${-100 * index}%)` }}>
                     {reports && reports.length > 0 ?
                         reports.map(report => {
                             const { id, title, mainMediaUrl, tags } = report;
@@ -31,6 +31,9 @@ export default function ReportSlider({ reports }) {
                                 <div className="filter"></div>
                                 <div className="info">
                                     <h3>{title}</h3>
+                                    <ul>
+                                        {tags && tags.length > 0 && tags.map(tag => <li key={tag}>{tag}</li>)}
+                                    </ul>
                                 </div>
                             </div>)
                         })
