@@ -10,9 +10,9 @@ export default function ReportsSecitons() {
     const [reports, setReports] = useState([]);
 
     useEffect(() => {
-        getReports()
+        getReports(3)
             .then(res => {
-                setReports(res.slice(0,3));
+                setReports(res);
             })
             .catch(e => {
             });

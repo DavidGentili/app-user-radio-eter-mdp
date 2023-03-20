@@ -1,0 +1,99 @@
+.singleReportMain {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.singleReportMain .mainMedia {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.singleReportMain .mainMedia .filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 2;
+}
+
+.singleReportMain .content {
+    width: var(--container);
+    margin: auto;
+    padding-top: 64px;
+    margin-top: -15vh;
+    margin-bottom: 15vh;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    position: relative;
+    z-index: 3;
+}
+
+.singleReportMain .content .title,
+.singleReportMain .content .contentBody {
+    padding: 0 48px;
+}
+
+.singleReportMain .content h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.singleReportMain .content .contentBody {
+    display: grid;
+    gap: 24px;
+}
+
+.singleReportMain .content .contentBody p {
+    line-height: 1.4;
+}
+
+.singleReportMain .content .contentBody img {
+    margin-bottom: 16px;
+    margin: auto;
+}
+
+.singleReportMain .content .tags {
+    width: 100%;
+    padding: 24px 48px;
+    background-color: #E0E0E0;
+}
+
+.singleReportMain .content .tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.singleReportMain .content .tags ul li {
+    cursor: pointer;
+}
+
+@media (max-width : 1024px) {
+    .singleReportMain .content {
+        width: 90%;
+        margin-top: -20vh;
+    }
+
+    .singleReportMain .content .title,
+    .singleReportMain .content .contentBody {
+        padding: 0 24px;
+    }
+
+    .singleReportMain .content .tags {
+        padding: 16px 24px;
+    }
+}

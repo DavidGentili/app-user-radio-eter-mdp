@@ -1,0 +1,73 @@
+.otherReports {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: var(--container);
+}
+
+.otherReports .report {
+}
+
+.otherReports .report .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 12px;
+    height: 256px;
+}
+
+.otherReports .image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: cover;
+}
+
+.otherReports .report h4 {
+    font-size: 24px;
+    color: var(--lightBlue);
+}
+
+.otherReports .report p {
+    margin-bottom: auto;
+    line-height: 1.4;
+}
+
+.otherReports .report a {
+    margin-left: auto;
+    color: var(--lightBlue);
+    position: relative;
+    padding-bottom: 5px;
+    opacity: .7;
+}
+
+.otherReports .report a::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--lightBlue);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 3px;
+}
+
+.otherReports .report a:hover {
+    opacity: 1;
+}
+
+@media (max-width : 1024px) {
+    .otherReports {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .otherReports .report .info {
+        height: auto;
+    }
+
+    .otherReports .report a {
+        opacity: 1;
+    }
+}

@@ -27,7 +27,7 @@ export default function PanelReport({ oficialPublicities }) {
 
     return (
         <main className="ReportsPage">
-            <ReportSlider reports={reports} />
+            <ReportSlider reports={reports.slice(0,4)} />
             <AllReports reports={reports} />
             <section>
                 <PublicityPanel horizontal oficialPublicities={oficialPublicities} />

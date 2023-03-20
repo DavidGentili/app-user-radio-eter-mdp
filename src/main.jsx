@@ -26,6 +26,10 @@ import '@styles/home/reportSection.css';
 import '@styles/reports/reports.css'
 import '@styles/reports/reportSlider.css'
 import '@styles/reports/allReports.css'
+import '@styles/reports/singleReportMain.css'
+import '@styles/reports/otherReports.css'
+
+
 
 
 
