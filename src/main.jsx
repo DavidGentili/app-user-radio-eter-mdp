@@ -7,6 +7,7 @@ import App from './App'
 //Styles General
 import '@styles/general/globals.css'
 import '@styles/general/App.css'
+import '@styles/general/errorPage.css'
 import '@styles/general/footer.css'
 import '@styles/general/header.css'
 import '@styles/general/weatherPanel.css'
