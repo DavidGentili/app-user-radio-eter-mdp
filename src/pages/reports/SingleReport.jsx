@@ -4,6 +4,7 @@ import { getReportById, getReportsWithoutId } from '@services/reports';
 import ErrorPage from '@components/ErrorPage';
 import SingleReportMain from '@components/reports/SingleReportMain';
 import OtherReports from '@components/reports/OtherReports';
+import PageTransition from '../../components/PageTransition';
 
 export default function SingleReport() {
 
@@ -24,10 +25,10 @@ export default function SingleReport() {
 
     useEffect(() => {
         getReportsWithoutId(reportId)
-        .then(res => {
-            setOtherReports(res);
-        })
-        .catch()
+            .then(res => {
+                setOtherReports(res);
+            })
+            .catch()
     }, [])
 
     if (isLoading)
@@ -37,9 +38,9 @@ export default function SingleReport() {
         return <ErrorPage />
 
     return (
-        <main className="singleReport">
+        <PageTransition className="singleReport">
             <SingleReportMain report={report} />
             <OtherReports reports={otherReports} />
-        </main>
+        </PageTransition>
     )
 }

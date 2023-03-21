@@ -1,16 +1,18 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { motion } from 'framer-motion';
 
 //Components
 import SliderSection from './SliderSection';
 import GridSection from './GridSection';
 import ReportsSecitons from './ReportsSections';
+import PageTransition from '../../components/PageTransition';
 
 
 
 const Home = ({ standardPublicities, oficialPublicities }) => {
 
     return (
-        <main className='homePage'>
+        <PageTransition className='homePage'>
 
             <SliderSection {...{ standardPublicities }} />
 
@@ -18,8 +20,7 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
 
             <GridSection {...{ oficialPublicities }} />
 
-
-        </main>
+        </PageTransition>
     )
 }
 

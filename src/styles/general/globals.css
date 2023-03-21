@@ -112,6 +112,7 @@ section {
     }
 }
 
+
 @keyframes loadingPanel {
     to {
         background-position-x: -200%;

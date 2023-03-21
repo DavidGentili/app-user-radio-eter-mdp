@@ -134,4 +134,8 @@
     .reportSection .reports .report a::after {
         background-color: var(--lightBlue);
     }
+
+    .reportSection .report a {
+        opacity: 1;
+    }
 }
