@@ -11,6 +11,8 @@ import PanelReport from './pages/reports/PanelReport';
 import SingleReport from './pages/reports/SingleReport';
 import ErrorPage from './components/ErrorPage';
 import PageTransition from './components/PageTransition';
+import PanelPodcast from './pages/podcast/PanelPodcast';
+import SinglePodcast from './pages/podcast/SinglePodcast';
 
 function App() {
 
@@ -22,20 +24,25 @@ function App() {
         <div className="App">
             <Header />
             <AnimatePresence >
-                    <Routes location={location} key={location.pathname} >
+                <Routes location={location} key={location.pathname} >
 
-                        <Route index element={<Home {...{ oficialPublicities, standardPublicities }} />} />
+                    <Route index element={<Home {...{ oficialPublicities, standardPublicities }} />} />
 
-                        <Route path='informes'>
-                            <Route index element={<PanelReport {...{ oficialPublicities, standardPublicities }} />} />
-                            <Route path=':reportId' element={<SingleReport />} />
-                        </Route>
+                    <Route path='informes'>
+                        <Route index element={<PanelReport {...{ oficialPublicities, standardPublicities }} />} />
+                        <Route path=':reportId' element={<SingleReport />} />
+                    </Route>
 
-                        <Route path='*' element={<ErrorPage />} />
-                    </Routes>
+                    <Route path='podcast'>
+                        <Route index element={<PanelPodcast {...{ oficialPublicities, standardPublicities }} />} />
+                        <Route path=':podcastId' element={<SinglePodcast />} />
+                    </Route>
+
+                    <Route path='*' element={<ErrorPage />} />
+                </Routes>
             </AnimatePresence>
             <Footer />
-            <Player />
+            {/* <Player /> */}
         </div>
     )
 }

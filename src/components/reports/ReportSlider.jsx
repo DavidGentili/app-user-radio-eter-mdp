@@ -1,24 +1,11 @@
 import React, { useState } from 'react'
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@components/Icons';
+import useSlider from '../../hooks/useSlider';
 
 export default function ReportSlider({ reports }) {
 
-    const [index, setindex] = useState(0);
-
-    const next = (e) => {
-        setindex(index === reports.length - 1 ? 0 : index + 1);
-    }
-
-    const prev = (e) => {
-        setindex(index === 0 ? reports.length - 1 : index - 1);
-    }
-
-    const defineIndex = (index) => {
-        return (e) => {
-            setindex(index);
-        }
-    }
+    const { prev, next, defineIndex, index } = useSlider(reports)
 
     return (
         <section className='reportSlider'>

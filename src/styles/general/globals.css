@@ -6,6 +6,8 @@
     margin: 0;
     box-sizing: border-box;
     transition: .6s;
+    -webkit-transition: .6s;
+    -ms-transition: .6s;
 }
 
 body {
