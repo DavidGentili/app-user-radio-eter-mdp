@@ -1,0 +1,46 @@
+.singlePodcastPanel .podcastData {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 64px;
+    justify-content: space-between;
+}
+
+.singlePodcastPanel .podcastData .info h2{
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.singlePodcastPanel .podcastData .info p {
+    font-size: 16px;
+    margin: 24px 0 48px 0;
+    line-height: 32px;
+}
+
+.singlePodcastPanel .podcastData .info .urls {
+    display: flex;
+    gap: 16px;
+}
+
+.singlePodcastPanel .podcastData .info .urls .icon {
+    width: 36px;
+    height: 36px;
+}
+
+.singlePodcastPanel .podcastData .info .urls a:hover {
+    transform: translateY(-8px) scale(1.1);
+}
+
+.singlePodcastPanel .podcastData .image {
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .singlePodcastPanel .podcastData {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+}

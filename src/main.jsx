@@ -33,8 +33,9 @@ import '@styles/reports/otherReports.css'
 //Styles Podcast
 import '@styles/podcast/mainSlider.css'
 import '@styles/podcast/episodePodcastPanel.css'
-
-
+import '@styles/podcast/podcastData.css'
+import '@styles/podcast/singlePodcast.css'
+import '@styles/podcast/episodesOfPodcast.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -43,5 +44,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <App />
         </BrowserRouter>
     </React.StrictMode>,
-    
+
 )

@@ -51,7 +51,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    padding: 4px 8px;
+    padding: 8px;
     display: flex;
     gap: 8px;
     background-color: #242424;
@@ -82,18 +82,37 @@
     z-index: 5;
     display: grid;
     gap: 12px;
+    justify-items: start;
 }
 
-.podcastPage .latestEpisodes .episodes .singleEpisode h4 {
+.podcastPage .latestEpisodes .episodes .singleEpisode .info h4 {
     font-weight: 600;
     font-size: 18px;
     color: var(--white);
 }
 
-.podcastPage .latestEpisodes .episodes .singleEpisode h5 {
+.podcastPage .latestEpisodes .episodes .singleEpisode .info a {
     font-size: 16px;
     font-weight: 500;
     color: var(--pink);
+    position: relative;
+    padding-bottom: 3px;
+    overflow: hidden;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--pink);
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info a:hover::after {
+    transform: translateX(0);
 }
 
 .podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(1) {
@@ -123,6 +142,7 @@
 
 .podcastPage .latestEpisodes .singleEpisode .icon {
     width: 28px;
+    height: 28px;
 }
 
 @media (max-width: 1024px) {

@@ -35,7 +35,7 @@ function App() {
 
                     <Route path='podcast'>
                         <Route index element={<PanelPodcast {...{ oficialPublicities, standardPublicities }} />} />
-                        <Route path=':podcastId' element={<SinglePodcast />} />
+                        <Route path=':podcastId' element={<SinglePodcast {...{oficialPublicities}} />} />
                     </Route>
 
                     <Route path='*' element={<ErrorPage />} />

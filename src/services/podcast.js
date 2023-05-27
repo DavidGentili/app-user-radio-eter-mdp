@@ -3,7 +3,7 @@ import { instance } from "./config";
 export async function getPodcast() {
     try {
 
-        const { data } = await instance.get('/podcast');
+        const { data } = await instance.get(`/podcast`);
         return data;
     } catch (e) {
 
@@ -16,5 +16,15 @@ export async function getLatestEpisodes(size = 3) {
         return data;
     } catch (e) {
 
+    }
+}
+
+export async function getPodcastWithEpisode(podcastId) {
+    try {
+
+        const { data } = await instance.get(`/podcast/withepisodes?podcastId=${podcastId}`);
+        return data;
+    } catch (e) {
+        console.log(e.response.data)
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export default function PageTransition({ children, className }) {
+export default function PageTransition({ children, className, style }) {
 
 
     return (
@@ -10,6 +10,7 @@ export default function PageTransition({ children, className }) {
             animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
             exit={{ opacity: 0, transition: { duration: 0.6 } }}
             className={className}
+            style={style}
         >
             {children}
         </motion.main>
