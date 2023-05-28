@@ -6,6 +6,7 @@ import SliderSection from './SliderSection';
 import GridSection from './GridSection';
 import ReportsSecitons from './ReportsSections';
 import PageTransition from '../../components/PageTransition';
+import PodcastSection from './PodcastSection';
 
 
 
@@ -17,6 +18,8 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
             <SliderSection {...{ standardPublicities }} />
 
             <ReportsSecitons />
+
+            <PodcastSection />
 
             <GridSection {...{ oficialPublicities }} />
 

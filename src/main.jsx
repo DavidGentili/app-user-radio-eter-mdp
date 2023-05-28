@@ -22,6 +22,7 @@ import '@styles/home/home.css';
 import '@styles/home/programGrid.css';
 import '@styles/home/mainSlider.css';
 import '@styles/home/reportSection.css';
+import '@styles/home/podcastSection.css';
 
 //Styles Reports
 import '@styles/reports/reports.css'
@@ -36,7 +37,6 @@ import '@styles/podcast/episodePodcastPanel.css'
 import '@styles/podcast/podcastData.css'
 import '@styles/podcast/singlePodcast.css'
 import '@styles/podcast/episodesOfPodcast.css'
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

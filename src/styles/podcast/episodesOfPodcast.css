@@ -3,10 +3,11 @@
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 16px;
-    margin-top: 128px;
     background-color: #FFFFFFD0;
     min-height: 50vh;
     margin-bottom: 64px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .singlePodcastPanel .episodesOfPoscast .listElement {
@@ -69,10 +70,35 @@
 
 .singlePodcastPanel .selectedEpisode .urls .icon {
     width: 36px;
+    box-shadow: 8px 8px 32px #24242430;
+    border-radius: 100%;
 }
 
 .singlePodcastPanel .selectedEpisode .urls a:hover {
     transform: translateY(-8px) scale(1.05);
+}
+
+.singlePodcastPanel .notEpisodes {
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+    margin-bottom: 64px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 32px #24242430;
+}
+
+.singlePodcastPanel .notEpisodes img {
+    width: 512px;
+    margin: auto;
+}
+
+.singlePodcastPanel .notEpisodes h6 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
 @media (max-width: 1024px) {
@@ -85,6 +111,14 @@
     .singlePodcastPanel .episodesOfPoscast .episodeList {
         width: 100%;
     }
+
+    .singlePodcastPanel .notEpisodes {
+        text-align: center;
+    }
+
+    .singlePodcastPanel .notEpisodes img {
+        width: 80%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -95,5 +129,13 @@
     .singlePodcastPanel .episodesOfPoscast .selectedEpisode .urls {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .singlePodcastPanel .notEpisodes {
+        padding: 64px 16px;
+    }
+
+    .singlePodcastPanel .notEpisodes img {
+        width: 100%;
     }
 }

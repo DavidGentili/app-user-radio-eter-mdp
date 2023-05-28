@@ -9,6 +9,7 @@ export default function SinglePodcastPanel({ podcast, episodes, oficialPubliciti
     return (
         <section className='singlePodcastPanel'>
             <PodcastData {...podcast} />
+            <h3>Episodios</h3>
             <EpisodesOfPodcast episodes={episodes} defaultImg={podcast.imgUrl} />
             <PublicityPanel horizontal oficialPublicities={oficialPublicities} />
         </section>
