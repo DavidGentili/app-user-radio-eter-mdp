@@ -3,7 +3,7 @@ import { instance } from "./config";
 export async function getPodcast() {
     try {
 
-        const { data } = await instance.get(`/podcast`);
+        const { data } = await instance.get(`/podcast?active=true`);
         return data;
     } catch (e) {
 
