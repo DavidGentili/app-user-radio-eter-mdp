@@ -1,0 +1,22 @@
+.errorPage {
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 6fr 1fr 1fr;
+}
+
+.errorPage .image {
+    width: 256px;
+    margin: auto;
+}
+
+.errorPage h2 {
+    opacity: .7;
+    text-align: center;
+}
+
+.errorPage a {
+    margin: 16px auto;
+    color: var(--lightBlue);
+    font-size: 20px;
+}

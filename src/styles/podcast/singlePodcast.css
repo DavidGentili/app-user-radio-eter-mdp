@@ -1,0 +1,27 @@
+.singlePodcast {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20vh 0;
+}
+
+.singlePodcast .singlePodcastPanel {
+    position: relative;
+    z-index: 6;
+    margin: 64px auto;
+    padding: 128px 64px;
+    background-color: #F1F1F1D0;
+}
+
+.singlePodcast .blur {
+    background-attachment: fixed;
+}
+
+.singlePodcastPanel > h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 16px;
+}

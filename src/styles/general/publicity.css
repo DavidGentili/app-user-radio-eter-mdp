@@ -1,0 +1,23 @@
+.publicity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1.125/1;
+    transition: .5s;
+}
+
+.publicity a {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.publicity img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

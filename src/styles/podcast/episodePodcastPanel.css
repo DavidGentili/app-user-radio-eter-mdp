@@ -1,0 +1,181 @@
+.podcastPage .latestEpisodes {
+    display: grid;
+    gap: 36px;
+    padding: 64px 0;
+}
+
+.podcastPage .latestEpisodes h2 {
+    color: var(--lightBlue);
+    font-weight: 600;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.podcastPage .latestEpisodes .episodes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    aspect-ratio: 8/6;
+    gap: 16px 16px;
+    grid-template-areas:
+        "a a a a b b d d"
+        "a a a a b b d d"
+        "a a a a c c d d"
+        "a a a a c c e e"
+        "f f f f f f e e"
+        "f f f f f f e e";
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    padding: 24px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(odd):hover {
+    background-position: top left;
+
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(even):hover {
+    background-position: bottom right;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .urls {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    background-color: #242424;
+    border-radius: 4px;
+    z-index: 5;
+    transform: translateY(-75%);
+    opacity: 0;
+}
+
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:hover .urls {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #24242460;
+    z-index: 4;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    gap: 12px;
+    justify-items: start;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info h4 {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pink);
+    position: relative;
+    padding-bottom: 3px;
+    overflow: hidden;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--pink);
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode .info a:hover::after {
+    transform: translateX(0);
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(1) {
+    grid-area: a;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(2) {
+    grid-area: b;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(3) {
+    grid-area: c;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(4) {
+    grid-area: d;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(5) {
+    grid-area: e;
+}
+
+.podcastPage .latestEpisodes .episodes .singleEpisode:nth-child(6) {
+    grid-area: f;
+}
+
+
+.podcastPage .latestEpisodes .singleEpisode .icon {
+    width: 28px;
+    height: 28px;
+}
+
+@media (max-width: 1024px) {
+    .podcastPage .latestEpisodes .episodes {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e f";
+        aspect-ratio: auto;
+    }
+
+    .podcastPage .latestEpisodes .episodes .singleEpisode {
+        aspect-ratio: 1/1;
+    }
+
+    .podcastPage .latestEpisodes .episodes .singleEpisode .urls {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .podcastPage .latestEpisodes .episodes {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f";
+    }
+
+}

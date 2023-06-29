@@ -1,0 +1,205 @@
+.podcastSection {
+    display: grid;
+    justify-content: center;
+    gap: 36px;
+}
+
+.podcastSection .podcastList {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.podcastSection .podcastList>h3 {
+    position: absolute;
+    z-index: 4;
+    font-size: 96px;
+    font-weight: 600;
+    color: var(--pink);
+    bottom: 25%;
+    left: -224px;
+    transform: rotateZ(270deg);
+    opacity: .6;
+}
+
+.podcastSection .podcastList .podcastItem {
+    position: relative;
+    aspect-ratio: 9/16;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px 12px;
+    overflow: hidden;
+}
+
+.podcastSection .podcastList .podcastItem .info {
+    z-index: 5;
+    transform: translateY(50%);
+    color: var(--white);
+}
+
+.podcastSection .podcastList .podcastItem:hover .info {
+    transform: translate(0);
+}
+
+.podcastSection .podcastList .podcastItem .info h5 {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.podcastSection .podcastList .podcastItem .info p {
+    opacity: 0;
+}
+
+.podcastSection .podcastList .podcastItem:hover .info p {
+    opacity: 1;
+}
+
+.podcastSection .episodesList {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 128px;
+}
+
+.podcastSection .episodesList>h3 {
+    position: absolute;
+    z-index: 4;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--lightBlue);
+    top: 30%;
+    right: -192px;
+    transform: rotateZ(90deg);
+    opacity: .6;
+}
+
+
+.podcastSection .episodesList .singleEpisode {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    padding: 24px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+}
+
+.podcastSection .episodesList .singleEpisode .urls {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    background-color: #242424;
+    border-radius: 4px;
+    z-index: 5;
+    transform: translateY(-75%);
+    opacity: 0;
+}
+
+
+.podcastSection .episodesList .singleEpisode:hover .urls {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.podcastSection .episodesList .singleEpisode .info {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    gap: 12px;
+    justify-items: start;
+}
+
+.podcastSection .episodesList .singleEpisode .info h4 {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.podcastSection .episodesList .singleEpisode .info a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pink);
+    position: relative;
+    padding-bottom: 3px;
+    overflow: hidden;
+}
+
+.podcastSection .episodesList .singleEpisode .info a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--pink);
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.podcastSection .episodesList .singleEpisode .icon {
+    width: 28px;
+    height: 28px;
+}
+
+.podcastSection>a {
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 4px;
+    color: var(--lightBlue);
+    border-bottom: 3px solid var(--lightBlue);
+}
+
+@media (max-width : 1024px) {
+
+    .podcastSection .podcastList>h3,
+    .podcastSection .episodesList>h3 {
+        transform: rotateZ(0);
+        top: -92px;
+        bottom: initial;
+        right: initial;
+        left: 0;
+        font-size: 64px;
+    }
+
+    .podcastSection .podcastList {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .podcastSection .podcastList .podcastItem {
+        aspect-ratio: 1/1;
+    }
+
+    .podcastSection .podcastList .podcastItem .info p {
+        opacity: 1;
+    }
+
+    .podcastSection .podcastList .podcastItem .info {
+        transform: translate(0);
+    }
+
+    .podcastSection .episodesList {
+        grid-template-columns: 1fr;
+    }
+
+    .podcastSection .episodesList .singleEpisode .urls {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@media (max-width : 960px) {
+    .podcastSection .podcastList {
+        grid-template-columns: 1fr;
+    }
+}

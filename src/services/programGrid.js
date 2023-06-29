@@ -1,7 +1,8 @@
 import { instance } from "./config";
 
 export async function getProgramGrid(){
-    return await instance.get('/programgrid');
+    const grid = await instance.get('/programgrid');
+    return grid
 }
 
 export async function getCurrentProgram(){
