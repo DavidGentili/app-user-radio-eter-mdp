@@ -31,14 +31,14 @@ export default function AllReports({ reports }) {
             <div className="reports">
                 {selectedReports.map(report => {
                     const { id, mainMediaUrl, title, description } = report
-                    return (<div className='report boxContainer' key={id} style={{ backgroundImage: `url(${mainMediaUrl})` }}>
+                    return (<Link to={`/informes/${id}`}  className='report boxContainer' key={id} style={{ backgroundImage: `url(${mainMediaUrl})` }}>
                         <span className='filter'></span>
                         <div className="info">
                             <h3>{title}</h3>
                             <p>{description.slice(0, 140) + (description.length > 140 ? '...' : '')}</p>
                             <span><Link to={`/informes/${id}`}>Seguir leyendo</Link></span>
                         </div>
-                    </div>)
+                    </Link>)
                 })}
             </div>
             <div className="controls">
