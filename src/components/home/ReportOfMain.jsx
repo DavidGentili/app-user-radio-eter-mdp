@@ -7,12 +7,12 @@ export default function ReportofMain({ report }) {
 
 
     return (
-        <div className='report boxContainer' style={{ backgroundImage: `url(${mainMediaUrl})` }}>
+        <Link to={`/informes/${id}`} className='report boxContainer' style={{ backgroundImage: `url(${mainMediaUrl})` }}>
             <span className='filter'></span>
             <div className="info">
                 <h3>{title}</h3>
                 <span><Link to={`/informes/${id}`}>Seguir leyendo</Link></span>
             </div>
-        </div>
+        </Link>
     )
 }
