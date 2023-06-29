@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ListEpisodeElement from './ListEpisodeElement';
 import UrlsPanel from '../generals/UrlsPanel';
 import notEpisodes from '../../../assets/not-episodes.png';
+import SpotifyPlayer from './SpotifyPlayer';
 
 export default function EpisodesOfPodcast({ episodes, defaultImg }) {
 
@@ -35,6 +36,7 @@ export default function EpisodesOfPodcast({ episodes, defaultImg }) {
                     <img src={currentEpisode.imgUrl || defaultImg} alt={currentEpisode.title} />
                     <h4>{currentEpisode.title}</h4>
                     <p>{currentEpisode.description}</p>
+                    {currentEpisode.urls.spotify && <SpotifyPlayer episode={currentEpisode.urls.spotify} />}
                     <UrlsPanel {...currentEpisode.urls} />
                 </>}
             </div>
