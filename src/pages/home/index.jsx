@@ -17,11 +17,12 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
 
             <SliderSection {...{ standardPublicities }} />
 
+            <GridSection {...{ oficialPublicities }} />
+
             <ReportsSecitons />
 
             <PodcastSection />
 
-            <GridSection {...{ oficialPublicities }} />
 
         </PageTransition>
     )

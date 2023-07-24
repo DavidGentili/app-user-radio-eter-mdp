@@ -2,24 +2,38 @@
     position: relative;
     overflow: hidden;
     grid-area: principalSlider;
-    aspect-ratio: 75/52;
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
 }
 
 .mainSlider img {
     display: flex;
     flex-shrink: 0;
     width: 100%;
-    aspect-ratio: 75/52;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.mainSlider .imageContainer .image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .mainSlider .imageContainer {
     display: flex;
     justify-content: flex-start;
-    width: 100%;
     height: 100%;
     transition: .6s;
+
 }
 
 .mainSlider .chevronLeft,
@@ -56,6 +70,10 @@
 
 
 @media (max-width: 1024px) {
+
+    .mainSlider {
+        height: auto;
+    }
 
     .mainSlider .chevronLeft,
     .mainSlider .chevronRight {
