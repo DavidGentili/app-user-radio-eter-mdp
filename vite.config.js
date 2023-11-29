@@ -18,6 +18,6 @@ export default defineConfig({
   },
   define: {
     "process.env": process.env,
-    VITE_API_URL: process.env.VITE_API_URL
+    VITE_API_URL: process.env.NEXT_PUBLIC_VITE_API_URL
   }
 })
