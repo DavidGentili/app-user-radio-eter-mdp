@@ -5,16 +5,16 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@components/Icons';
 
 const MainSlider = ({ contentSlider, loading }) => {
 
-    const limit = 1;
     const [sliderPosition, SetSliderPosition] = useState(0);
 
     const nextEvent = (e) => {
-        SetSliderPosition((sliderPosition === limit) ? 0 : sliderPosition + 1);
+        SetSliderPosition((sliderPosition === contentSlider.length - 1) ? 0 : sliderPosition + 1);
     }
 
     const prevEvent = (e) => {
-        SetSliderPosition((sliderPosition === 0) ? limit : sliderPosition - 1);
+        SetSliderPosition((sliderPosition === 0) ? contentSlider.length - 1 : sliderPosition - 1);
     }
+    
     return (
         <div className={`mainSlider boxContainer ${loading && 'loading'}`}>
             {!loading && <button className='chevronLeft' onClick={prevEvent} ><ChevronLeftIcon /></button>}
