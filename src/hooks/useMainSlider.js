@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { mainSliderName } from "../config";
-import { getPlaformContentByname } from "../services/content";
+import { mainSliderCode } from "../config";
+import { getPlaformContentByname, getPlatformContentByCode } from "../services/content";
 import { completeSliderContent } from "../helpers/sliederContent";
 
 
@@ -11,9 +11,9 @@ export default function useMainSlider() {
 
     useEffect(() => {
         setLoading(true);
-        getPlaformContentByname(mainSliderName)
+        getPlatformContentByCode(mainSliderCode)
             .then(data => {
-                const content = completeSliderContent(data.map(item =>({
+                const content = completeSliderContent(data.map(item => ({
                     name: item.title,
                     urlImage: item.src
                 })));
