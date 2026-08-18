@@ -1,9 +1,11 @@
 .programGrid {
     width: 100%;
-    padding: 0 .5%;
     overflow: hidden;
     position: relative;
-    --slide: 33.3%
+    --visible-days: 3;
+    --days-gap: 3.3%;
+    --nav-gutter: 28px;
+    padding: 0 max(.5%, var(--nav-gutter));
 }
 
 .programGrid button {
@@ -40,14 +42,25 @@
 .programGrid .contentDays {
     display: flex;
     width: 100%;
-    gap: 3.3%;
+    gap: var(--days-gap);
     justify-content: flex-start;
-    transition: .6s ease-in-out;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+}
+
+.programGrid .contentDays::-webkit-scrollbar {
+    display: none;
 }
 
 .programGrid .gridDay {
-    min-width: 30%;
+    flex: 0 0 calc((100% - (var(--visible-days) - 1) * var(--days-gap)) / var(--visible-days));
+    min-width: 0;
     margin-bottom: 8px;
+    scroll-snap-align: start;
 }
 
 .programGrid .gridDay>h6 {
@@ -138,32 +151,16 @@
 
 @media (max-width: 768px) {
     .programGrid {
-        padding: 0 2%;
-        --slide: 50%
-    }
-
-    .programGrid .contentDays {
-        gap: 4%;
-    }
-
-    .programGrid .gridDay {
-        min-width: 47%;
+        padding: 0 max(2%, var(--nav-gutter));
+        --visible-days: 2;
+        --days-gap: 4%;
     }
 }
 
-@media (max-width: 640px) {}
-
-@media (max-width: 420px) {
+@media (max-width: 640px) {
     .programGrid {
-        padding: 0 5%;
-        --slide: 100%
-    }
-
-    .programGrid .contentDays {
-        gap: 5%;
-    }
-
-    .programGrid .gridDay {
-        min-width: 95%;
+        padding: 0 max(5%, var(--nav-gutter));
+        --visible-days: 1;
+        --days-gap: 0%;
     }
 }
