@@ -20,7 +20,7 @@
 
 .player .isotipo{
     opacity: 0;
-    fill: var(--lightBlue);
+    fill: var(--primary);
     position: absolute;
     width: 80%;
     top: -40%;
@@ -92,19 +92,19 @@
 
 .player .playBtn{
     padding: 12px;
-    background-color: var(--lightBlue);
+    background-color: var(--primary);
     border-radius: 100%;
     fill: var(--white);
 }
 
 .player .soundBtn{
     padding: 6px;
-    fill: var(--lightBlue);
+    fill: var(--primary);
 }
 
 .player .expandBtn{
     position: absolute;
-    fill: var(--lightBlue);
+    fill: var(--primary);
     padding: 6px;
     right: 0;
     top: 12px;

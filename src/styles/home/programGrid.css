@@ -1,4 +1,4 @@
-.programGrid{
+.programGrid {
     width: 100%;
     padding: 0 .5%;
     overflow: hidden;
@@ -6,7 +6,7 @@
     --slide: 33.3%
 }
 
-.programGrid button{
+.programGrid button {
     position: absolute;
     width: 20px;
     opacity: 0;
@@ -14,30 +14,30 @@
     transition: .6s ease-in-out;
 }
 
-.programGrid:hover button{
+.programGrid:hover button {
     opacity: .7;
 }
 
-.programGrid:hover button:hover{
+.programGrid:hover button:hover {
     opacity: 1;
 }
 
-.programGrid button .chevronIcon{
+.programGrid button .chevronIcon {
     width: 100%;
-    fill: var(--lightBlue);
+    fill: var(--primary);
 }
 
-.programGrid .chevronLeft{
+.programGrid .chevronLeft {
     left: 0px;
     top: 50%;
 }
 
-.programGrid .chevronRight{
+.programGrid .chevronRight {
     right: 0px;
     top: 50%;
 }
 
-.programGrid .contentDays{
+.programGrid .contentDays {
     display: flex;
     width: 100%;
     gap: 3.3%;
@@ -45,70 +45,75 @@
     transition: .6s ease-in-out;
 }
 
-.programGrid .gridDay{
-    min-width: 30%; 
+.programGrid .gridDay {
+    min-width: 30%;
     margin-bottom: 8px;
 }
 
-.programGrid .gridDay > h6{
+.programGrid .gridDay>h6 {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 36px;
+    color: var(--accent);
 }
 
-.programGrid .gridDay .program{
+.programGrid .gridDay .program {
     display: flex;
     width: 100%;
     position: relative;
 }
 
-.programGrid .gridDay .program{
+.programGrid .gridDay .program {
     display: flex;
     width: 100%;
     align-items: baseline;
     justify-content: space-between;
     hyphens: manual;
     text-align: center;
-    color: var(--black);
+
 }
 
-.programGrid .gridDay .program .hour{
+.programGrid .gridDay .program .hour {
     width: 30%;
-    color: var(--lightBlack);
+    color: var(--primary);
     font-size: 16px;
     font-weight: 500;
     opacity: .8;
 }
 
-.programGrid .gridDay .program .name{
+.programGrid .gridDay .program .name {
     width: 50%;
     margin-top: -6px;
     font-size: 14px;
     font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 8px 8px 8px 0;
+    background-color: var(--primary);
+    color: var(--accent);
 }
 
-.programGrid .gridDay .program .circle{
+.programGrid .gridDay .program .circle {
     position: relative;
     z-index: 2;
     width: 16px;
     height: 16px;
-    margin: 0  calc(10% - 8px);
+    margin: 0 calc(10% - 8px);
     border-radius: 100%;
-    border: 5px solid var(--lightBlue);
+    border: 5px solid var(--primary);
 }
 
-.programGrid .gridDay .program .line{
+.programGrid .gridDay .program .line {
     height: calc(100% - 15px);
     width: 2px;
     background-color: var(--lightBlack);
     position: absolute;
-    left: calc(40% - 1px );
+    left: calc(40% - 1px);
     top: 16px;
     z-index: 1;
 }
 
-.programGrid .gridDay .program:last-child::after{
+.programGrid .gridDay .program:last-child::after {
     content: '';
     position: absolute;
     z-index: 3;
@@ -116,51 +121,49 @@
     height: 16px;
     border-radius: 100%;
     background-color: var(--white);
-    border: 5px solid var(--lightBlue);
+    border: 5px solid var(--primary);
     bottom: -1px;
-    left: calc(40% - 8px );
+    left: calc(40% - 8px);
 }
 
-@media (max-width: 1024px){
-    .programGrid{
+@media (max-width: 1024px) {
+    .programGrid {
         margin: 36px auto;
     }
 
-    .programGrid button{
+    .programGrid button {
         opacity: 1;
     }
 }
 
-@media (max-width: 768px){
-    .programGrid{
+@media (max-width: 768px) {
+    .programGrid {
         padding: 0 2%;
         --slide: 50%
-
     }
-    .programGrid .contentDays{
+
+    .programGrid .contentDays {
         gap: 4%;
     }
-    .programGrid .gridDay{
-        min-width: 47%; 
+
+    .programGrid .gridDay {
+        min-width: 47%;
     }
 }
 
-@media (max-width: 640px){
+@media (max-width: 640px) {}
 
-
-
-}
-
-@media (max-width: 420px){
-    .programGrid{
+@media (max-width: 420px) {
+    .programGrid {
         padding: 0 5%;
         --slide: 100%
-
     }
-    .programGrid .contentDays{
+
+    .programGrid .contentDays {
         gap: 5%;
     }
-    .programGrid .gridDay{
-        min-width: 95%; 
+
+    .programGrid .gridDay {
+        min-width: 95%;
     }
 }

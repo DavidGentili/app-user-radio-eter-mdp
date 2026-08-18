@@ -14,6 +14,7 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
 
     return (
         <PageTransition className='homePage'>
+            <div className='homePage__background'></div>
 
             <SliderSection {...{ standardPublicities }} />
 

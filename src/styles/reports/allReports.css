@@ -81,7 +81,7 @@
 .allReportsSection .report a {
     font-size: 14px;
     display: flex;
-    color: var(--lightBlue);
+    color: var(--primary);
     position: relative;
     padding-bottom: 3px;
     opacity: 0;
@@ -94,7 +94,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--lightBlue);
+    background-color: var(--primary);
 }
 
 .allReportsSection .report a:hover {
@@ -115,7 +115,7 @@
 .allReportsSection .controls button {
     width: 24px;
     height: 24px;
-    fill: var(--lightBlue);
+    fill: var(--primary);
     opacity: .8;
 }
 

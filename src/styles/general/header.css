@@ -21,24 +21,24 @@ header nav {
 }
 
 header nav a {
-    color: var(--lightBlue);
+    color: var(--foreground-nav);
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     overflow: hidden;
     position: relative;
-    padding: 3px;
+    padding: 4px;
     transition: 1s;
 }
 
 header nav a::after {
     content: "";
     width: 100%;
-    height: 4px;
+    height: 3px;
     bottom: 0;
     left: 0;
     position: absolute;
-    background-color: var(--lightBlue);
+    background-color: var(--foreground-nav);
     transform: translateX(-100%);
 }
 
@@ -58,7 +58,7 @@ header > button {
     display: none;
     width: 32px;
     height: 32px;
-    fill: var(--lightBlue);
+    fill: var(--foreground-nav);
     /* fill: #404040; */
 }
 
@@ -80,7 +80,7 @@ header > button svg {
         flex-direction: column;
         width: 30%;
         height: 100vh;
-        background-color: var(--white);
+        background: var(--background-nav);
         padding: 48px 36px;
         box-shadow: 10px 0 10px #24242430;
         transform: translateX(-110%);
@@ -96,6 +96,7 @@ header > button svg {
 
     header nav a {
         display: flex;
+        color: var(--foreground-nav);
     }
 
     header nav a::after {
