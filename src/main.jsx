@@ -12,6 +12,7 @@ import '@styles/general/footer.css'
 import '@styles/general/header.css'
 import '@styles/general/weatherPanel.css'
 import '@styles/general/player.css'
+import '@styles/general/airPlayer.css'
 import '@styles/general/publicityPanel.css'
 import '@styles/general/publicity.css'
 

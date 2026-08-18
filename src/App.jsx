@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Home from '@pages/home';
-import Player from '@components/generals/Player';
 import Header from '@components/generals/Header'
 import Footer from '@components/generals/Footer'
 import usePublicies from './hooks/usePublicities';
@@ -13,6 +12,7 @@ import ErrorPage from './components/ErrorPage';
 import PageTransition from './components/PageTransition';
 import PanelPodcast from './pages/podcast/PanelPodcast';
 import SinglePodcast from './pages/podcast/SinglePodcast';
+import AirPlayer from '@components/generals/player/AirPlayer';
 
 function App() {
 
@@ -42,7 +42,7 @@ function App() {
                 </Routes>
             </AnimatePresence>
             <Footer />
-            {/* <Player /> */}
+            <AirPlayer />
         </div>
     )
 }
