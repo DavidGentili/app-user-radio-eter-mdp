@@ -17,6 +17,7 @@ body {
 :root {
     --primary: #4BC1EA;
     --secondary: #C4F300;
+    --tertiary: #FF90E8;
 
     --foreground: #F6F6F6;
     --accent: #FFFFFF;

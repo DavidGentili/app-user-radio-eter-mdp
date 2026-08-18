@@ -71,11 +71,11 @@
     z-index: 4;
     font-size: 64px;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--tertiary);
     top: 30%;
     right: -192px;
     transform: rotateZ(90deg);
-    opacity: .6;
+    opacity: .8;
 }
 
 
