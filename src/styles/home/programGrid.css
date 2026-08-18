@@ -89,9 +89,9 @@
 
 .programGrid .gridDay .program .hour {
     width: 30%;
-    color: var(--primary);
+    color: var(--foreground);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     opacity: .8;
 }
 
