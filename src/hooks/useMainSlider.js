@@ -13,6 +13,7 @@ export default function useMainSlider() {
         setLoading(true);
         getPlatformContentByCode(mainSliderCode)
             .then(data => {
+                console.log(data);
                 const content = completeSliderContent(data.map(item => ({
                     name: item.title,
                     urlImage: item.src
