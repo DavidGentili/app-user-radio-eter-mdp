@@ -3,7 +3,7 @@ import ReactHlsPlayer from 'react-hls-player';
 
 import { PlayIcon, ChevronTopIcon, SoundIcon, MutedIcon, PauseIcon, FullscreenIcon, ExitFullscreenIcon } from '@components/Icons';
 import { getCurrentProgram } from '@services/programGrid';
-import { mediaPlayerUrl } from '@services/config';
+import { mediaPlayerUrl } from '@config';
 
 export default function AirPlayer() {
     const [expanded, setExpanded] = useState(false);
@@ -69,14 +69,6 @@ export default function AirPlayer() {
             document.removeEventListener('fullscreenchange', onFullscreenChange);
             document.removeEventListener('webkitfullscreenchange', onFullscreenChange);
         };
-    }, [])
-
-    useEffect(() => {
-        if (window.innerWidth > 640) {
-            setTimeout(() => {
-                setExpanded(true);
-            }, 3000);
-        }
     }, [])
 
     const handlerFullscreen = async () => {
@@ -156,7 +148,7 @@ export default function AirPlayer() {
                 >
                     {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
                 </button> */}
-                <button
+                {/* <button
                     type="button"
                     onClick={() => { if (!isFullscreen) setExpanded(!expanded) }}
                     className='expandBtn'
@@ -164,7 +156,7 @@ export default function AirPlayer() {
                     disabled={isFullscreen}
                 >
                     <ChevronTopIcon />
-                </button>
+                </button>*/}
 
             </div>
         </div>

@@ -3,7 +3,7 @@ import ReactHlsPlayer from 'react-hls-player';
 
 import { PlayIcon, ChevronTopIcon, SoundIcon, MutedIcon, PauseIcon, Isotipo } from '@components/Icons';
 import { getCurrentProgram } from '@services/programGrid';
-import { mediaPlayerUrl } from '@services/config';
+import { mediaPlayerUrl } from '@config';
 
 
 const BottomPlayer = () => {
