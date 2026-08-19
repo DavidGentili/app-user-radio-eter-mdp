@@ -26,8 +26,6 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
 
             <PodcastSection />
 
-            <Link to='/en-vivo'>En vivo</Link> 
-
         </PageTransition>
     )
 }
