@@ -39,6 +39,9 @@ import '@styles/podcast/podcastData.css'
 import '@styles/podcast/singlePodcast.css'
 import '@styles/podcast/episodesOfPodcast.css'
 
+//Styles Player
+import '@styles/player/livePlayer.css'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <BrowserRouter>

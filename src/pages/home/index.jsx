@@ -7,6 +7,7 @@ import GridSection from './GridSection';
 import ReportsSecitons from './ReportsSections';
 import PageTransition from '../../components/PageTransition';
 import PodcastSection from './PodcastSection';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,6 +17,7 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
         <PageTransition className='homePage'>
             <div className='homePage__background'></div>
 
+
             <SliderSection {...{ standardPublicities }} />
 
             <GridSection {...{ oficialPublicities }} />
@@ -24,6 +26,7 @@ const Home = ({ standardPublicities, oficialPublicities }) => {
 
             <PodcastSection />
 
+            <Link to='/en-vivo'>En vivo</Link> 
 
         </PageTransition>
     )
