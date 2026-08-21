@@ -1,4 +1,4 @@
-.player{
+.bottomPlayer{
     background-color: var(--white);
     position: fixed;
     left: 0;
@@ -12,15 +12,15 @@
     z-index: 99;
 }
 
-.player.expanded{
+.bottomPlayer.expanded{
     height: 100%;
     padding: 48px 12px;
     transition: .6s ease-in-out;
 }
 
-.player .isotipo{
+.bottomPlayer .isotipo{
     opacity: 0;
-    fill: var(--lightBlue);
+    fill: var(--primary);
     position: absolute;
     width: 80%;
     top: -40%;
@@ -30,12 +30,12 @@
     transition: .6s .6s ease-in-out;
 }
 
-.player.expanded .isotipo{
+.bottomPlayer.expanded .isotipo{
     opacity: 1;
     transition: .6s ease-in-out;
 }
 
-.player .playerContainer{
+.bottomPlayer .playerContainer{
     z-index: 2;
     max-width: 1280px;
     height: 100%;
@@ -48,7 +48,7 @@
     transition: .6s;
 }
 
-.player .controls{
+.bottomPlayer .controls{
     position: absolute;
     z-index: 3;
     display: flex;
@@ -59,24 +59,24 @@
     transition: .6s .6s ease-in-out;
 }
 
-.player.expanded .controls{
+.bottomPlayer.expanded .controls{
     left: 50%;
     bottom: 0;
     transition: .6s ease-in-out;
 }
 
-.player .controls input{
+.bottomPlayer .controls input{
     width: 0;
     opacity: 0;
     transition: .6s;
 }
 
-.player .controls:hover input{
+.bottomPlayer .controls:hover input{
     opacity: 1;
     width: 100px;
 }
 
-.player button{
+.bottomPlayer button{
     width: 48px;
     height: 48px;
     display: flex;
@@ -86,43 +86,43 @@
     transition: .6s;
 }
 
-.player button:hover{
+.bottomPlayer button:hover{
     transform: scale(1.1);
 }
 
-.player .playBtn{
+.bottomPlayer .playBtn{
     padding: 12px;
-    background-color: var(--lightBlue);
+    background-color: var(--primary);
     border-radius: 100%;
     fill: var(--white);
 }
 
-.player .soundBtn{
+.bottomPlayer .soundBtn{
     padding: 6px;
-    fill: var(--lightBlue);
+    fill: var(--primary);
 }
 
-.player .expandBtn{
+.bottomPlayer .expandBtn{
     position: absolute;
-    fill: var(--lightBlue);
+    fill: var(--primary);
     padding: 6px;
     right: 0;
     top: 12px;
     transition: transform .6s, fill .6s .6s ease-in-out;
 }
 
-.player.expanded .expandBtn{
+.bottomPlayer.expanded .expandBtn{
     transform: rotate(180deg);
     fill: var(--white);
     transition: .6s ease-in-out;
 
 }
 
-.player .mutedIcon{
+.bottomPlayer .mutedIcon{
     fill: var(--lightBlack);
 }
 
-.player h6{
+.bottomPlayer h6{
     position: absolute;
     font-size: 24px;
     font-weight: 600;
@@ -131,7 +131,7 @@
     top: 20px;
 }
 
-.player .playerWindow{
+.bottomPlayer .playerWindow{
     max-width: 764px;
     margin: auto;
     aspect-ratio: 16/9;
@@ -146,26 +146,26 @@
     transition: transform .3s .4s, opacity .4s;
 }
 
-.player.expanded .playerWindow{
+.bottomPlayer.expanded .playerWindow{
     opacity: 1;
     transform: translateY(0);
     transition: transform .3s, opacity .6s .6s;
 
 }
 
-.player .playerWindow video{
+.bottomPlayer .playerWindow video{
     width: 100%;
     opacity: 0;
     transition: .6s;
 }
 
-.player .playerWindow video.visible{
+.bottomPlayer .playerWindow video.visible{
     opacity: 1;
 }
 
 
 @media (max-width: 1024px){
-    .player .isotipo{
+    .bottomPlayer .isotipo{
         width: 100%;
         top: 0%;
         right: -30%;
@@ -173,29 +173,29 @@
 }
 
 @media (max-width: 768px){
-    .player .isotipo{
+    .bottomPlayer .isotipo{
         width: 130%;
         right: -50%;
     }
 }
 
 @media (max-width: 640px){
-    .player .controls .soundBtn{
+    .bottomPlayer .controls .soundBtn{
         display: none;
     }
 
-    .player h6{
+    .bottomPlayer h6{
         font-size: 20px;
     }
 
-    .player .isotipo{
+    .bottomPlayer .isotipo{
         width: 180%;
         right: -80%;
     }
 }
 
 @media (max-width: 300px){
-    .player h6{
+    .bottomPlayer h6{
         display: none;
     }
 }

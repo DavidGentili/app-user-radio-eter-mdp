@@ -36,6 +36,7 @@ export default function PanelReport({ oficialPublicities }) {
     return (
         <PageTransition className="ReportsPage">
             <ReportSlider reports={reports.slice(0, 4)} />
+            <div className="reportsPage-background "></div>
             <AllReports reports={reports} />
             <section>
                 <PublicityPanel horizontal oficialPublicities={oficialPublicities} />

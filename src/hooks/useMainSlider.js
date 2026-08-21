@@ -13,9 +13,12 @@ export default function useMainSlider() {
         setLoading(true);
         getPlatformContentByCode(mainSliderCode)
             .then(data => {
+                console.log(data);
                 const content = completeSliderContent(data.map(item => ({
                     name: item.title,
-                    urlImage: item.src
+                    urlImage: item.src,
+                    href: item.link?.trim() || null,
+                    popup: item.popup === true
                 })));
                 setMainSliderContent(content);
             })

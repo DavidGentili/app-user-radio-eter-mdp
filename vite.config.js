@@ -13,7 +13,7 @@ export default defineConfig({
       '@services': '/src/services',
       '@assets': '/assets',
       '@hooks': '/src/hooks',
-
+      '@config': '/src/config',
     }
   },
   define: {

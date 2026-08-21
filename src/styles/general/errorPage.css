@@ -17,6 +17,6 @@
 
 .errorPage a {
     margin: 16px auto;
-    color: var(--lightBlue);
+    color: var(--primary);
     font-size: 20px;
 }

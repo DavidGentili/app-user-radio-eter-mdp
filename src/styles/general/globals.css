@@ -15,12 +15,26 @@ body {
 }
 
 :root {
+    --primary: #4BC1EA;
+    --secondary: #C4F300;
+    --tertiary: #FF90E8;
+
+    --foreground: #F6F6F6;
+    --accent: #FFFFFF;
+    
+    --background-nav: linear-gradient(to bottom, #0C2231, #173F5E, #215C8A);
+    --foreground-nav: #FFFFFF;
+
+    /* --background-footer: linear-gradient(to top, #0C2231, #173F5E, #215C8A); */
+    --background-footer: #173F5E;
+
     --purple: #B67DEF;
     --lightBlue: #4BC1EA;
     --pink: #FF90E8;
     --yellow: #FFF030;
     --green: #C4F300;
     --blue: #5148F7;
+    --darkBlue: #0C2231;
     --black: #242424;
     --lightBlack: #707070;
     --white: #FFFFFF;
@@ -70,7 +84,7 @@ svg {
     z-index: 3;
     width: 64px;
     height: 64px;
-    border: 5px solid var(--lightBlue);
+    border: 5px solid var(--primary);
     border-bottom: 5px solid #4BC1EA00;
     border-left: 5px solid #4BC1EA55;
     border-top: 5px solid #4BC1EAAA;
