@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Home from '@pages/home';
-import Player from '@components/generals/Player';
 import Header from '@components/generals/Header'
 import Footer from '@components/generals/Footer'
 import usePublicies from './hooks/usePublicities';
@@ -13,10 +12,13 @@ import ErrorPage from './components/ErrorPage';
 import PageTransition from './components/PageTransition';
 import PanelPodcast from './pages/podcast/PanelPodcast';
 import SinglePodcast from './pages/podcast/SinglePodcast';
+import AirPlayer from '@components/generals/player/AirPlayer';
+import LivePlayer from '@pages/player/LivePlayer';
 
 function App() {
 
     const location = useLocation();
+    const isLivePlayerPage = location.pathname === '/en-vivo';
 
     const { oficialPublicities, standardPublicities } = usePublicies();
 
@@ -38,11 +40,13 @@ function App() {
                         <Route path=':podcastId' element={<SinglePodcast {...{oficialPublicities}} />} />
                     </Route>
 
+                    <Route path='en-vivo' element={<LivePlayer />} />
+
                     <Route path='*' element={<ErrorPage />} />
                 </Routes>
             </AnimatePresence>
-            <Footer />
-            <Player />
+            {!isLivePlayerPage && <Footer />}
+            {!isLivePlayerPage && <AirPlayer />}
         </div>
     )
 }

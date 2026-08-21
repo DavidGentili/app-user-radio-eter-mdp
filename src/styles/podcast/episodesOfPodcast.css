@@ -32,7 +32,7 @@
 }
 
 .singlePodcastPanel .episodesOfPoscast .listElement.active .icon{
-    fill: var(--lightBlue);
+    fill: var(--primary);
 }
 
 .singlePodcastPanel .episodesOfPoscast .listElement .icon {

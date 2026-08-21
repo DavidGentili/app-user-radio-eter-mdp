@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 
 
-import logoLightBlueAndWhite from '@assets/Isologotipo-lb-w.png';
+import logoLightBlueAndWhite from '@assets/logotipo-w-g.png';
 import { CloseIcon, MenuIcon } from '../Icons';
 
 const Header = () => {

@@ -3,10 +3,10 @@ import ReactHlsPlayer from 'react-hls-player';
 
 import { PlayIcon, ChevronTopIcon, SoundIcon, MutedIcon, PauseIcon, Isotipo } from '@components/Icons';
 import { getCurrentProgram } from '@services/programGrid';
-import { mediaPlayerUrl } from '@services/config';
+import { mediaPlayerUrl } from '@config';
 
 
-const Player = () => {
+const BottomPlayer = () => {
 
     const [expanded, setExpanded] = useState(false);
     const [played, setPlayed] = useState(false);
@@ -57,7 +57,7 @@ const Player = () => {
     },[])
 
     return (
-        <div className={"player" + (expanded ? ' expanded' : '')}>
+        <div className={"bottomPlayer" + (expanded ? ' expanded' : '')}>
             <div className="playerContainer">
                 <div className="controls">
                     <button className='playBtn' onClick={handlerPlay}> { !played ? <PlayIcon/> : <PauseIcon/> } </button>
@@ -85,4 +85,4 @@ const Player = () => {
     )
 }
 
-export default Player
+export default BottomPlayer

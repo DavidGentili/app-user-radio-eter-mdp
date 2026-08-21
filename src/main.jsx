@@ -12,6 +12,7 @@ import '@styles/general/footer.css'
 import '@styles/general/header.css'
 import '@styles/general/weatherPanel.css'
 import '@styles/general/player.css'
+import '@styles/general/airPlayer.css'
 import '@styles/general/publicityPanel.css'
 import '@styles/general/publicity.css'
 
@@ -37,6 +38,9 @@ import '@styles/podcast/episodePodcastPanel.css'
 import '@styles/podcast/podcastData.css'
 import '@styles/podcast/singlePodcast.css'
 import '@styles/podcast/episodesOfPodcast.css'
+
+//Styles Player
+import '@styles/player/livePlayer.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
